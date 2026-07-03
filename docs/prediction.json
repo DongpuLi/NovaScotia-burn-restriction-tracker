@@ -14,8 +14,8 @@
       "humidity_mean_percent": 73,
       "precipitation_mm": 0.0,
       "rain_mm": 0.0,
-      "wind_max_kmh": 18.4,
-      "wind_gust_max_kmh": 31.3,
+      "wind_max_kmh": 17.8,
+      "wind_gust_max_kmh": 29.5,
       "dry_streak_days": 1
     }
   },
@@ -30,7 +30,7 @@
     "weather": {
       "date": "2026-07-04",
       "temperature_max_c": 29.9,
-      "temperature_min_c": 19.6,
+      "temperature_min_c": 19.7,
       "humidity_mean_percent": 68,
       "precipitation_mm": 0.0,
       "rain_mm": 0.0,

@@ -2,7 +2,7 @@
   "Annapolis-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Annapolis-County",
       "county": "Annapolis County",
@@ -14,7 +14,7 @@
   "Antigonish-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Antigonish-County",
       "county": "Antigonish County",
@@ -26,7 +26,7 @@
   "Cape-Breton-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Cape-Breton-County",
       "county": "Cape Breton County",
@@ -38,7 +38,7 @@
   "Colchester-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Colchester-County",
       "county": "Colchester County",
@@ -50,7 +50,7 @@
   "Cumberland-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Cumberland-County",
       "county": "Cumberland County",
@@ -62,7 +62,7 @@
   "Digby-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Digby-County",
       "county": "Digby County",
@@ -74,7 +74,7 @@
   "Guysborough-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Guysborough-County",
       "county": "Guysborough County",
@@ -86,7 +86,7 @@
   "Halifax-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Halifax-County",
       "county": "Halifax County",
@@ -98,7 +98,7 @@
   "Hants-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Hants-County",
       "county": "Hants County",
@@ -110,7 +110,7 @@
   "Inverness-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Inverness-County",
       "county": "Inverness County",
@@ -122,7 +122,7 @@
   "Kings-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Kings-County",
       "county": "Kings County",
@@ -134,7 +134,7 @@
   "Lunenburg-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Lunenburg-County",
       "county": "Lunenburg County",
@@ -146,7 +146,7 @@
   "Pictou-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Pictou-County",
       "county": "Pictou County",
@@ -158,7 +158,7 @@
   "Queens-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Queens-County",
       "county": "Queens County",
@@ -170,7 +170,7 @@
   "Richmond-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Richmond-County",
       "county": "Richmond County",
@@ -182,7 +182,7 @@
   "Shelburne-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Shelburne-County",
       "county": "Shelburne County",
@@ -194,7 +194,7 @@
   "Victoria-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Victoria-County",
       "county": "Victoria County",
@@ -206,7 +206,7 @@
   "Yarmouth-County": [
     {
       "date": "2026-07-03",
-      "updated_at": "2026-07-03T15:23:24-03:00",
+      "updated_at": "2026-07-03T16:24:48-03:00",
       "timezone": "America/Halifax",
       "county_id": "Yarmouth-County",
       "county": "Yarmouth County",
