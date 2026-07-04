@@ -5,8 +5,8 @@
   "correct": 1,
   "accuracy": 1.0,
   "all_evaluated": {
-    "total": 2,
-    "correct": 2,
+    "total": 3,
+    "correct": 3,
     "accuracy": 1.0
   },
   "by_horizon": {
@@ -53,8 +53,8 @@
       "accuracy": null
     },
     "yellow": {
-      "total": 2,
-      "correct": 2,
+      "total": 3,
+      "correct": 3,
       "accuracy": 1.0
     },
     "red": {
@@ -75,8 +75,8 @@
       "accuracy": null
     },
     "yellow": {
-      "total": 2,
-      "correct": 2,
+      "total": 3,
+      "correct": 3,
       "accuracy": 1.0
     },
     "red": {
@@ -99,7 +99,7 @@
     },
     "yellow": {
       "green": 0,
-      "yellow": 2,
+      "yellow": 3,
       "red": 0,
       "unknown": 0
     },
@@ -116,5 +116,5 @@
       "unknown": 0
     }
   },
-  "updated_at": "2026-07-04T14:55:25-03:00"
+  "updated_at": "2026-07-04T16:15:38-03:00"
 }
