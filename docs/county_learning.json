@@ -23,6 +23,30 @@
         "wind_gust_max_kmh": 38.9,
         "dry_streak_days": 1
       }
+    },
+    {
+      "evaluation_key": "Annapolis-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Annapolis-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "yellow",
+      "actual": "yellow",
+      "correct": true,
+      "confidence": 75,
+      "model": "rule",
+      "reason": "hot day, little or no rain, moderate wind",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 28.7,
+        "temperature_min_c": 18.9,
+        "humidity_mean_percent": 65,
+        "precipitation_mm": 0.0,
+        "rain_mm": 0.0,
+        "wind_max_kmh": 22.5,
+        "wind_gust_max_kmh": 40.3,
+        "dry_streak_days": 2
+      }
     }
   ],
   "Antigonish-County": [
@@ -46,6 +70,30 @@
         "precipitation_mm": 1.8,
         "rain_mm": 1.1,
         "wind_max_kmh": 12.3,
+        "wind_gust_max_kmh": 29.5,
+        "dry_streak_days": 0
+      }
+    },
+    {
+      "evaluation_key": "Antigonish-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Antigonish-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "green",
+      "actual": "yellow",
+      "correct": false,
+      "confidence": 75,
+      "model": "rule",
+      "reason": "hot day, meaningful rain expected",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 28.4,
+        "temperature_min_c": 19.8,
+        "humidity_mean_percent": 80,
+        "precipitation_mm": 4.6,
+        "rain_mm": 2.0,
+        "wind_max_kmh": 12.1,
         "wind_gust_max_kmh": 29.5,
         "dry_streak_days": 0
       }
@@ -75,6 +123,30 @@
         "wind_gust_max_kmh": 35.3,
         "dry_streak_days": 0
       }
+    },
+    {
+      "evaluation_key": "Cape-Breton-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Cape-Breton-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "green",
+      "actual": "yellow",
+      "correct": false,
+      "confidence": 75,
+      "model": "rule",
+      "reason": "hot day, meaningful rain expected",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 29.3,
+        "temperature_min_c": 15.8,
+        "humidity_mean_percent": 80,
+        "precipitation_mm": 5.0,
+        "rain_mm": 2.0,
+        "wind_max_kmh": 14.4,
+        "wind_gust_max_kmh": 37.8,
+        "dry_streak_days": 0
+      }
     }
   ],
   "Colchester-County": [
@@ -100,6 +172,30 @@
         "wind_max_kmh": 22.4,
         "wind_gust_max_kmh": 42.1,
         "dry_streak_days": 1
+      }
+    },
+    {
+      "evaluation_key": "Colchester-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Colchester-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "green",
+      "actual": "yellow",
+      "correct": false,
+      "confidence": 69,
+      "model": "rule",
+      "reason": "warm day, moderate wind",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 26.6,
+        "temperature_min_c": 17.9,
+        "humidity_mean_percent": 80,
+        "precipitation_mm": 0.7,
+        "rain_mm": 0.7,
+        "wind_max_kmh": 22.2,
+        "wind_gust_max_kmh": 38.5,
+        "dry_streak_days": 0
       }
     }
   ],
@@ -127,6 +223,30 @@
         "wind_gust_max_kmh": 34.9,
         "dry_streak_days": 1
       }
+    },
+    {
+      "evaluation_key": "Cumberland-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Cumberland-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "yellow",
+      "actual": "yellow",
+      "correct": true,
+      "confidence": 70,
+      "model": "rule",
+      "reason": "warm day, little or no rain, moderate wind",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 25.8,
+        "temperature_min_c": 17.7,
+        "humidity_mean_percent": 84,
+        "precipitation_mm": 0.4,
+        "rain_mm": 0.4,
+        "wind_max_kmh": 20.5,
+        "wind_gust_max_kmh": 35.6,
+        "dry_streak_days": 2
+      }
     }
   ],
   "Digby-County": [
@@ -153,6 +273,30 @@
         "wind_gust_max_kmh": 40.7,
         "dry_streak_days": 1
       }
+    },
+    {
+      "evaluation_key": "Digby-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Digby-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "yellow",
+      "actual": "yellow",
+      "correct": true,
+      "confidence": 75,
+      "model": "rule",
+      "reason": "hot day, little or no rain, moderate wind",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 28.9,
+        "temperature_min_c": 18.2,
+        "humidity_mean_percent": 65,
+        "precipitation_mm": 0.0,
+        "rain_mm": 0.0,
+        "wind_max_kmh": 22.7,
+        "wind_gust_max_kmh": 40.0,
+        "dry_streak_days": 2
+      }
     }
   ],
   "Guysborough-County": [
@@ -177,6 +321,30 @@
         "rain_mm": 1.9,
         "wind_max_kmh": 14.1,
         "wind_gust_max_kmh": 33.8,
+        "dry_streak_days": 0
+      }
+    },
+    {
+      "evaluation_key": "Guysborough-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Guysborough-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "green",
+      "actual": "yellow",
+      "correct": false,
+      "confidence": 69,
+      "model": "rule",
+      "reason": "hot day",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 29.2,
+        "temperature_min_c": 19.3,
+        "humidity_mean_percent": 79,
+        "precipitation_mm": 1.9,
+        "rain_mm": 1.0,
+        "wind_max_kmh": 13.9,
+        "wind_gust_max_kmh": 36.4,
         "dry_streak_days": 0
       }
     }
@@ -205,6 +373,30 @@
         "wind_gust_max_kmh": 31.0,
         "dry_streak_days": 1
       }
+    },
+    {
+      "evaluation_key": "Halifax-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Halifax-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "yellow",
+      "actual": "yellow",
+      "correct": true,
+      "confidence": 70,
+      "model": "rule",
+      "reason": "hot day, little or no rain",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 29.9,
+        "temperature_min_c": 19.8,
+        "humidity_mean_percent": 68,
+        "precipitation_mm": 0.0,
+        "rain_mm": 0.0,
+        "wind_max_kmh": 19.9,
+        "wind_gust_max_kmh": 34.9,
+        "dry_streak_days": 2
+      }
     }
   ],
   "Hants-County": [
@@ -231,6 +423,30 @@
         "wind_gust_max_kmh": 33.5,
         "dry_streak_days": 1
       }
+    },
+    {
+      "evaluation_key": "Hants-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Hants-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "yellow",
+      "actual": "yellow",
+      "correct": true,
+      "confidence": 75,
+      "model": "rule",
+      "reason": "hot day, little or no rain, moderate wind",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 29.0,
+        "temperature_min_c": 19.3,
+        "humidity_mean_percent": 69,
+        "precipitation_mm": 0.0,
+        "rain_mm": 0.0,
+        "wind_max_kmh": 23.6,
+        "wind_gust_max_kmh": 36.4,
+        "dry_streak_days": 2
+      }
     }
   ],
   "Inverness-County": [
@@ -255,6 +471,30 @@
         "rain_mm": 0.9,
         "wind_max_kmh": 13.5,
         "wind_gust_max_kmh": 34.9,
+        "dry_streak_days": 0
+      }
+    },
+    {
+      "evaluation_key": "Inverness-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Inverness-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "green",
+      "actual": "yellow",
+      "correct": false,
+      "confidence": 72,
+      "model": "rule",
+      "reason": "warm day",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 25.6,
+        "temperature_min_c": 18.3,
+        "humidity_mean_percent": 84,
+        "precipitation_mm": 2.8,
+        "rain_mm": 0.7,
+        "wind_max_kmh": 10.5,
+        "wind_gust_max_kmh": 27.7,
         "dry_streak_days": 0
       }
     }
@@ -283,6 +523,30 @@
         "wind_gust_max_kmh": 34.9,
         "dry_streak_days": 1
       }
+    },
+    {
+      "evaluation_key": "Kings-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Kings-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "yellow",
+      "actual": "yellow",
+      "correct": true,
+      "confidence": 70,
+      "model": "rule",
+      "reason": "warm day, meaningful rain expected, strong wind, high wind gusts",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 27.8,
+        "temperature_min_c": 18.8,
+        "humidity_mean_percent": 69,
+        "precipitation_mm": 13.3,
+        "rain_mm": 13.3,
+        "wind_max_kmh": 30.1,
+        "wind_gust_max_kmh": 48.6,
+        "dry_streak_days": 0
+      }
     }
   ],
   "Lunenburg-County": [
@@ -309,6 +573,30 @@
         "wind_gust_max_kmh": 33.8,
         "dry_streak_days": 1
       }
+    },
+    {
+      "evaluation_key": "Lunenburg-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Lunenburg-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "yellow",
+      "actual": "yellow",
+      "correct": true,
+      "confidence": 75,
+      "model": "rule",
+      "reason": "hot day, little or no rain, moderate wind",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 30.2,
+        "temperature_min_c": 20.3,
+        "humidity_mean_percent": 64,
+        "precipitation_mm": 0.0,
+        "rain_mm": 0.0,
+        "wind_max_kmh": 22.0,
+        "wind_gust_max_kmh": 36.4,
+        "dry_streak_days": 2
+      }
     }
   ],
   "Pictou-County": [
@@ -333,6 +621,30 @@
         "rain_mm": 9.0,
         "wind_max_kmh": 21.8,
         "wind_gust_max_kmh": 31.3,
+        "dry_streak_days": 0
+      }
+    },
+    {
+      "evaluation_key": "Pictou-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Pictou-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "green",
+      "actual": "yellow",
+      "correct": false,
+      "confidence": 75,
+      "model": "rule",
+      "reason": "hot day, meaningful rain expected",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 28.4,
+        "temperature_min_c": 17.2,
+        "humidity_mean_percent": 77,
+        "precipitation_mm": 38.2,
+        "rain_mm": 38.2,
+        "wind_max_kmh": 19.1,
+        "wind_gust_max_kmh": 36.0,
         "dry_streak_days": 0
       }
     }
@@ -361,6 +673,30 @@
         "wind_gust_max_kmh": 34.2,
         "dry_streak_days": 1
       }
+    },
+    {
+      "evaluation_key": "Queens-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Queens-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "yellow",
+      "actual": "yellow",
+      "correct": true,
+      "confidence": 75,
+      "model": "rule",
+      "reason": "hot day, little or no rain, moderate wind",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 29.7,
+        "temperature_min_c": 20.2,
+        "humidity_mean_percent": 63,
+        "precipitation_mm": 0.0,
+        "rain_mm": 0.0,
+        "wind_max_kmh": 22.0,
+        "wind_gust_max_kmh": 37.8,
+        "dry_streak_days": 2
+      }
     }
   ],
   "Richmond-County": [
@@ -385,6 +721,30 @@
         "rain_mm": 0.6,
         "wind_max_kmh": 11.5,
         "wind_gust_max_kmh": 29.9,
+        "dry_streak_days": 0
+      }
+    },
+    {
+      "evaluation_key": "Richmond-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Richmond-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "green",
+      "actual": "yellow",
+      "correct": false,
+      "confidence": 75,
+      "model": "rule",
+      "reason": "hot day, meaningful rain expected",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 28.9,
+        "temperature_min_c": 18.7,
+        "humidity_mean_percent": 85,
+        "precipitation_mm": 6.6,
+        "rain_mm": 1.7,
+        "wind_max_kmh": 12.9,
+        "wind_gust_max_kmh": 43.9,
         "dry_streak_days": 0
       }
     }
@@ -413,6 +773,30 @@
         "wind_gust_max_kmh": 36.4,
         "dry_streak_days": 1
       }
+    },
+    {
+      "evaluation_key": "Shelburne-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Shelburne-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "yellow",
+      "actual": "yellow",
+      "correct": true,
+      "confidence": 75,
+      "model": "rule",
+      "reason": "hot day, little or no rain, moderate wind",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 28.4,
+        "temperature_min_c": 18.1,
+        "humidity_mean_percent": 71,
+        "precipitation_mm": 0.0,
+        "rain_mm": 0.0,
+        "wind_max_kmh": 21.0,
+        "wind_gust_max_kmh": 37.8,
+        "dry_streak_days": 2
+      }
     }
   ],
   "Victoria-County": [
@@ -437,6 +821,30 @@
         "rain_mm": 2.2,
         "wind_max_kmh": 14.4,
         "wind_gust_max_kmh": 38.2,
+        "dry_streak_days": 0
+      }
+    },
+    {
+      "evaluation_key": "Victoria-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Victoria-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "green",
+      "actual": "yellow",
+      "correct": false,
+      "confidence": 78,
+      "model": "rule",
+      "reason": "warm day, meaningful rain expected",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 27.7,
+        "temperature_min_c": 17.4,
+        "humidity_mean_percent": 79,
+        "precipitation_mm": 10.2,
+        "rain_mm": 1.2,
+        "wind_max_kmh": 15.2,
+        "wind_gust_max_kmh": 41.8,
         "dry_streak_days": 0
       }
     }
@@ -464,6 +872,30 @@
         "wind_max_kmh": 23.9,
         "wind_gust_max_kmh": 48.2,
         "dry_streak_days": 1
+      }
+    },
+    {
+      "evaluation_key": "Yarmouth-County:2026-07-03->2026-07-04:h1",
+      "county_id": "Yarmouth-County",
+      "issued_date": "2026-07-03",
+      "target_date": "2026-07-04",
+      "horizon_days": 1,
+      "predicted": "yellow",
+      "actual": "yellow",
+      "correct": true,
+      "confidence": 70,
+      "model": "rule",
+      "reason": "warm day, little or no rain, moderate wind",
+      "weather": {
+        "date": "2026-07-04",
+        "temperature_max_c": 24.6,
+        "temperature_min_c": 15.9,
+        "humidity_mean_percent": 75,
+        "precipitation_mm": 0.0,
+        "rain_mm": 0.0,
+        "wind_max_kmh": 21.8,
+        "wind_gust_max_kmh": 41.8,
+        "dry_streak_days": 2
       }
     }
   ]
