@@ -301,14 +301,20 @@ def main() -> None:
     now = datetime.now(TIMEZONE)
     today = now.date().isoformat()
 
+    previous_latest = load_json("latest.json", None)
+
+    county_history = load_json("county_history.json", {})
+    county_archive = load_json("county_predictions_archive.json", {})
+    county_learning = load_json("county_learning.json", {})
+
     today_already_recorded = any(
         item.get("date") == today
         for item in county_history.get(DEFAULT_COUNTY_ID, [])
     )
 
     should_write_official = (
-    now.hour >= POSTING_HOUR
-    and not today_already_recorded
+        now.hour >= POSTING_HOUR
+        and not today_already_recorded
     )
 
     previous_latest = load_json("latest.json", None)

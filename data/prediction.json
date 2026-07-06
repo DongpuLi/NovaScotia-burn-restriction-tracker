@@ -9,7 +9,7 @@
     "reason": "little or no rain",
     "weather": {
       "date": "2026-07-06",
-      "temperature_max_c": 22.2,
+      "temperature_max_c": 22.9,
       "temperature_min_c": 12.1,
       "humidity_mean_percent": 76,
       "precipitation_mm": 0.0,
@@ -31,7 +31,7 @@
       "date": "2026-07-07",
       "temperature_max_c": 23.2,
       "temperature_min_c": 12.0,
-      "humidity_mean_percent": 76,
+      "humidity_mean_percent": 77,
       "precipitation_mm": 0.0,
       "rain_mm": 0.0,
       "wind_max_kmh": 13.8,
