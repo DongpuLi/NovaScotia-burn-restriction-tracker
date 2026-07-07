@@ -41,6 +41,9 @@ TIMEZONE = ZoneInfo("America/Halifax")
 POSTING_HOUR = 14
 DEFAULT_COUNTY_ID = "Halifax-County"
 
+BURN_SEASON_START = (3, 15)
+BURN_SEASON_END = (10, 15)
+
 
 def save_json_to_both(filename: str, data) -> None:
     for directory in (DATA_DIR, DOCS_DIR):
@@ -67,6 +70,11 @@ def normalize_level(level: str | None) -> str:
     if value in {"green", "yellow", "red"}:
         return value
     return "unknown"
+
+
+def is_burn_season(now: datetime) -> bool:
+    current = (now.month, now.day)
+    return BURN_SEASON_START <= current <= BURN_SEASON_END
 
 
 def update_county_history(
@@ -300,12 +308,47 @@ def archive_county_predictions(
 def main() -> None:
     now = datetime.now(TIMEZONE)
     today = now.date().isoformat()
+    in_burn_season = is_burn_season(now)
 
     previous_latest = load_json("latest.json", None)
 
     county_history = load_json("county_history.json", {})
     county_archive = load_json("county_predictions_archive.json", {})
     county_learning = load_json("county_learning.json", {})
+
+    if not in_burn_season:
+        latest = previous_latest or {
+            "date": today,
+            "updated_at": now.isoformat(timespec="seconds"),
+            "timezone": "America/Halifax",
+            "county_id": DEFAULT_COUNTY_ID,
+            "county": "Halifax County",
+            "level": "offseason",
+            "status": (
+                "Static archive mode. BurnSafe wildfire risk season runs "
+                "from March 15 to October 15. Verify local municipal and "
+                "provincial rules before burning."
+            ),
+            "source": "https://novascotia.ca/burnsafe/",
+        }
+
+        latest["site_mode"] = "offseason"
+        latest["level"] = "offseason"
+        latest["status"] = (
+            "Static archive mode. BurnSafe wildfire risk season runs "
+            "from March 15 to October 15. Verify local municipal and "
+            "provincial rules before burning."
+        )
+        latest["updated_at"] = now.isoformat(timespec="seconds")
+        latest["site_mode"] = "offseason"
+        latest["archive_season"] = str(now.year)
+
+        save_json_to_both("latest.json", latest)
+
+        print("Outside burn season.")
+        print("Static archive mode enabled.")
+        print("No BurnSafe/weather fetch performed.")
+        return
 
     today_already_recorded = any(
         item.get("date") == today
@@ -317,12 +360,6 @@ def main() -> None:
         and not today_already_recorded
     )
 
-    previous_latest = load_json("latest.json", None)
-
-    county_history = load_json("county_history.json", {})
-    county_archive = load_json("county_predictions_archive.json", {})
-    county_learning = load_json("county_learning.json", {})
-
     counties_data = fetch_all_counties()
     counties = counties_data.get("counties", [])
 
@@ -330,10 +367,12 @@ def main() -> None:
     counties_data["timezone"] = "America/Halifax"
 
     county_weather = fetch_all_county_weather()
-    weather_forecast = county_weather.get(DEFAULT_COUNTY_ID, {}).get(
-        "forecast",
-        fetch_weather_forecast(DEFAULT_COUNTY_ID),
-    )
+
+    halifax_weather = county_weather.get(DEFAULT_COUNTY_ID, {})
+    weather_forecast = halifax_weather.get("forecast")
+
+    if not weather_forecast:
+        weather_forecast = fetch_weather_forecast(DEFAULT_COUNTY_ID)
 
     predictions_by_county = {}
 
@@ -369,18 +408,22 @@ def main() -> None:
             county_archive=county_archive,
         )
 
-        halifax = fetch_status(DEFAULT_COUNTY_ID)
+        halifax = next(
+            (county for county in counties if county.get("id") == DEFAULT_COUNTY_ID),
+            {},
+        )
 
         latest = {
             "date": today,
             "updated_at": now.isoformat(timespec="seconds"),
             "timezone": "America/Halifax",
-            "county_id": halifax.get("county_id", DEFAULT_COUNTY_ID),
-            "county": halifax.get("county", "Halifax County"),
+            "site_mode": "active",
+            "county_id": halifax.get("id", DEFAULT_COUNTY_ID),
+            "county": halifax.get("name", "Halifax County"),
             "level": normalize_level(halifax.get("level")),
             "status": halifax.get("status", ""),
             "source": halifax.get("source", "https://novascotia.ca/burnsafe/"),
-            "official_updated_text": halifax.get("updated_text", ""),
+            "official_updated_text": counties_data.get("updated_text", ""),
         }
 
     else:
@@ -388,6 +431,7 @@ def main() -> None:
             "date": today,
             "updated_at": now.isoformat(timespec="seconds"),
             "timezone": "America/Halifax",
+            "site_mode": "active",
             "county_id": DEFAULT_COUNTY_ID,
             "county": "Halifax County",
             "level": "red",
@@ -395,6 +439,8 @@ def main() -> None:
             "source": "https://novascotia.ca/burnsafe/",
             "pre_2pm_display": True,
         }
+
+        latest["site_mode"] = "active"
 
     county_metrics = build_county_metrics(county_learning, counties)
 
@@ -416,12 +462,11 @@ def main() -> None:
 
     print("Updated.")
     print(f"Halifax time: {now.isoformat(timespec='seconds')}")
+    print(f"Burn season active: {in_burn_season}")
     print(f"After 2 p.m. posting time: {now.hour >= POSTING_HOUR}")
     print(f"Should write official data: {should_write_official}")
     print(f"Parsed {len(counties)} counties.")
     print(f"Generated county weather for {len(county_weather)} counties.")
     print(f"Generated county predictions for {len(predictions_by_county)} counties.")
-
-
 if __name__ == "__main__":
     main()

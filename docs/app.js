@@ -2,6 +2,7 @@ const DEFAULT_COUNTY_ID = "Halifax-County";
 
 let countiesById = {};
 let selectedCountyId = DEFAULT_COUNTY_ID;
+let siteMode = "active";
 let predictionsByCounty = {};
 let metricsByCounty = {};
 let historyByCounty = {};
@@ -19,7 +20,10 @@ function label(level) {
 
 function normalizeLevel(level) {
   const value = (level || "unknown").toLowerCase();
-  if (["green", "yellow", "red"].includes(value)) return value;
+
+  if (["green", "yellow", "red", "offseason"].includes(value))
+    return value;
+
   return "unknown";
 }
 
@@ -87,11 +91,31 @@ function getDisplayStatus(county) {
 }
 
 function setTheme(level) {
+
+  if (siteMode === "offseason") {
+    document.body.className = "";
+    document.body.classList.add("status-offseason");
+
+    const banner = document.getElementById("offseason-banner");
+    if (banner) banner.hidden = false;
+
+    const predictionCard = document.getElementById("prediction-card");
+    if (predictionCard) predictionCard.style.display = "none";
+
+    return;
+  }
+
   const allowed = ["green", "yellow", "red"];
   const theme = allowed.includes(level) ? level : "unknown";
 
   document.body.className = "";
   document.body.classList.add(`status-${theme}`);
+
+  const banner = document.getElementById("offseason-banner");
+  if (banner) banner.hidden = true;
+
+  const predictionCard = document.getElementById("prediction-card");
+  if (predictionCard) predictionCard.style.display = "";
 }
 
 function formatDate(value) {
@@ -341,6 +365,7 @@ function renderHistory(history) {
 async function main() {
   try {
     const latest = await loadJSON("latest.json");
+    siteMode = latest.site_mode || "active";
     const counties = await loadJSON("counties.json", { counties: [] });
 
     predictionsByCounty = await loadJSON("county_prediction.json", {});
