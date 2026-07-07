@@ -214,5 +214,101 @@
       "wind_gust_max_kmh": 33.5,
       "dry_streak_days": 2
     }
+  },
+  {
+    "evaluation_key": "Halifax-County:2026-07-03->2026-07-07:h4",
+    "county_id": "Halifax-County",
+    "issued_date": "2026-07-03",
+    "target_date": "2026-07-07",
+    "horizon_days": 4,
+    "predicted": "yellow",
+    "actual": "yellow",
+    "correct": true,
+    "confidence": 75,
+    "model": "rule",
+    "reason": "warm day, little or no rain, several dry days",
+    "weather": {
+      "date": "2026-07-07",
+      "temperature_max_c": 23.4,
+      "temperature_min_c": 12.9,
+      "humidity_mean_percent": 72,
+      "precipitation_mm": 0.0,
+      "rain_mm": 0.0,
+      "wind_max_kmh": 17.7,
+      "wind_gust_max_kmh": 37.8,
+      "dry_streak_days": 5
+    }
+  },
+  {
+    "evaluation_key": "Halifax-County:2026-07-04->2026-07-07:h3",
+    "county_id": "Halifax-County",
+    "issued_date": "2026-07-04",
+    "target_date": "2026-07-07",
+    "horizon_days": 3,
+    "predicted": "yellow",
+    "actual": "yellow",
+    "correct": true,
+    "confidence": 70,
+    "model": "rule",
+    "reason": "warm day, little or no rain, short dry spell",
+    "weather": {
+      "date": "2026-07-07",
+      "temperature_max_c": 24.2,
+      "temperature_min_c": 13.5,
+      "humidity_mean_percent": 66,
+      "precipitation_mm": 0.0,
+      "rain_mm": 0.0,
+      "wind_max_kmh": 14.3,
+      "wind_gust_max_kmh": 26.3,
+      "dry_streak_days": 4
+    }
+  },
+  {
+    "evaluation_key": "Halifax-County:2026-07-05->2026-07-07:h2",
+    "county_id": "Halifax-County",
+    "issued_date": "2026-07-05",
+    "target_date": "2026-07-07",
+    "horizon_days": 2,
+    "predicted": "yellow",
+    "actual": "yellow",
+    "correct": true,
+    "confidence": 70,
+    "model": "rule",
+    "reason": "warm day, little or no rain, short dry spell",
+    "weather": {
+      "date": "2026-07-07",
+      "temperature_max_c": 23.9,
+      "temperature_min_c": 11.7,
+      "humidity_mean_percent": 72,
+      "precipitation_mm": 0.0,
+      "rain_mm": 0.0,
+      "wind_max_kmh": 15.2,
+      "wind_gust_max_kmh": 22.7,
+      "dry_streak_days": 3
+    }
+  },
+  {
+    "evaluation_key": "Halifax-County:2026-07-06->2026-07-07:h1",
+    "county_id": "Halifax-County",
+    "issued_date": "2026-07-06",
+    "target_date": "2026-07-07",
+    "horizon_days": 1,
+    "predicted": "green",
+    "actual": "yellow",
+    "correct": false,
+    "confidence": 69,
+    "model": "rule",
+    "reason": "warm day, little or no rain",
+    "weather": {
+      "date": "2026-07-07",
+      "temperature_max_c": 23.2,
+      "temperature_min_c": 11.5,
+      "humidity_mean_percent": 80,
+      "precipitation_mm": 0.0,
+      "rain_mm": 0.0,
+      "wind_max_kmh": 13.8,
+      "wind_gust_max_kmh": 21.6,
+      "dry_streak_days": 2
+    }
   }
 ]

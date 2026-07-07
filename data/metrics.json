@@ -1,34 +1,34 @@
 {
   "version": "4.0",
   "primary_metric": "one_day_ahead",
-  "total_evaluated": 3,
+  "total_evaluated": 4,
   "correct": 1,
-  "accuracy": 0.3333,
+  "accuracy": 0.25,
   "all_evaluated": {
-    "total": 9,
-    "correct": 7,
-    "accuracy": 0.7778
+    "total": 13,
+    "correct": 10,
+    "accuracy": 0.7692
   },
   "by_horizon": {
     "1": {
-      "total": 3,
+      "total": 4,
       "correct": 1,
-      "accuracy": 0.3333
+      "accuracy": 0.25
     },
     "2": {
+      "total": 3,
+      "correct": 3,
+      "accuracy": 1.0
+    },
+    "3": {
       "total": 2,
       "correct": 2,
       "accuracy": 1.0
     },
-    "3": {
+    "4": {
       "total": 1,
       "correct": 1,
       "accuracy": 1.0
-    },
-    "4": {
-      "total": 0,
-      "correct": 0,
-      "accuracy": null
     },
     "5": {
       "total": 0,
@@ -53,9 +53,9 @@
       "accuracy": null
     },
     "yellow": {
-      "total": 9,
-      "correct": 7,
-      "accuracy": 0.7778
+      "total": 13,
+      "correct": 10,
+      "accuracy": 0.7692
     },
     "red": {
       "total": 0,
@@ -70,13 +70,13 @@
   },
   "by_predicted_level": {
     "green": {
-      "total": 2,
+      "total": 3,
       "correct": 0,
       "accuracy": 0.0
     },
     "yellow": {
-      "total": 7,
-      "correct": 7,
+      "total": 10,
+      "correct": 10,
       "accuracy": 1.0
     },
     "red": {
@@ -98,8 +98,8 @@
       "unknown": 0
     },
     "yellow": {
-      "green": 2,
-      "yellow": 7,
+      "green": 3,
+      "yellow": 10,
       "red": 0,
       "unknown": 0
     },
@@ -116,5 +116,5 @@
       "unknown": 0
     }
   },
-  "updated_at": "2026-07-07T10:14:43-03:00"
+  "updated_at": "2026-07-07T14:18:42-03:00"
 }
