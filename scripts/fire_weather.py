@@ -73,6 +73,8 @@ def ensure_fire_weather_files() -> None:
             "stations": {},
         },
         "county_fire_weather.json": {},
+        "fire_weather_metrics.json": {},
+        "fire_weather_evaluations.json": [],
     }
 
     for filename, default_data in files.items():
@@ -207,6 +209,20 @@ def fetch_fire_weather_actuals() -> dict:
         "stations": parsed["stations"],
     }
 
+def classify_fwi(fwi: float | None) -> str:
+    if fwi is None:
+        return "unknown"
+
+    if fwi < 5:
+        return "low"
+    if fwi < 12:
+        return "moderate"
+    if fwi < 21:
+        return "high"
+    if fwi < 30:
+        return "very_high"
+
+    return "extreme"
 
 def build_county_fire_weather(
     forecast: dict,
@@ -272,6 +288,89 @@ def build_county_fire_weather(
 
     return county_records
 
+def evaluate_fire_weather_forecast(
+    forecast: dict,
+    actuals: dict,
+    existing_evaluations: list,
+) -> list:
+    forecast_date = forecast.get("date")
+    actuals_date = actuals.get("date")
+
+    if not forecast_date or not actuals_date:
+        return existing_evaluations
+
+    if forecast_date != actuals_date:
+        return existing_evaluations
+
+    evaluations = [
+        item for item in existing_evaluations
+        if item.get("date") != forecast_date
+    ]
+
+    forecast_stations = forecast.get("stations", {})
+    actual_stations = actuals.get("stations", {})
+
+    for station, forecast_record in forecast_stations.items():
+        actual_record = actual_stations.get(station)
+        if not actual_record:
+            continue
+
+        forecast_fwi = forecast_record.get("fwi")
+        actual_fwi = actual_record.get("fwi")
+
+        forecast_class = classify_fwi(forecast_fwi)
+        actual_class = classify_fwi(actual_fwi)
+
+        evaluations.append({
+            "date": forecast_date,
+            "station": station,
+            "forecast_fwi": forecast_fwi,
+            "actual_fwi": actual_fwi,
+            "forecast_class": forecast_class,
+            "actual_class": actual_class,
+            "correct_class": forecast_class == actual_class,
+            "absolute_error": (
+                abs(forecast_fwi - actual_fwi)
+                if forecast_fwi is not None and actual_fwi is not None
+                else None
+            ),
+        })
+
+    evaluations.sort(key=lambda x: (x.get("date", ""), x.get("station", "")))
+    return evaluations
+
+def build_fire_weather_metrics(evaluations: list) -> dict:
+    total = len(evaluations)
+
+    if total == 0:
+        return {
+            "total_evaluated": 0,
+            "correct_class": 0,
+            "class_accuracy": None,
+            "mean_absolute_error": None,
+        }
+
+    correct = sum(1 for item in evaluations if item.get("correct_class"))
+
+    errors = [
+        item.get("absolute_error")
+        for item in evaluations
+        if item.get("absolute_error") is not None
+    ]
+
+    mean_absolute_error = (
+        round(sum(errors) / len(errors), 2)
+        if errors
+        else None
+    )
+
+    return {
+        "total_evaluated": total,
+        "correct_class": correct,
+        "class_accuracy": round(correct / total, 3),
+        "mean_absolute_error": mean_absolute_error,
+    }
+
 def update_fire_weather_files() -> tuple[dict, dict]:
     forecast = fetch_fire_weather_forecast()
     actuals = fetch_fire_weather_actuals()
@@ -287,6 +386,19 @@ def update_fire_weather_files() -> tuple[dict, dict]:
     )
 
     save_json_to_both("county_fire_weather.json", county_fire_weather)
+
+    existing_evaluations = load_json("fire_weather_evaluations.json", [])
+
+    evaluations = evaluate_fire_weather_forecast(
+        forecast=forecast,
+        actuals=actuals,
+        existing_evaluations=existing_evaluations,
+    )
+
+    metrics = build_fire_weather_metrics(evaluations)
+
+    save_json_to_both("fire_weather_evaluations.json", evaluations)
+    save_json_to_both("fire_weather_metrics.json", metrics)
 
     return forecast, actuals
 
