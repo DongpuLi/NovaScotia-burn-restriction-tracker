@@ -75,6 +75,7 @@ def ensure_fire_weather_files() -> None:
         "county_fire_weather.json": {},
         "fire_weather_metrics.json": {},
         "fire_weather_evaluations.json": [],
+        "fire_weather_forecast_archive.json": {},
     }
 
     for filename, default_data in files.items():
@@ -288,6 +289,19 @@ def build_county_fire_weather(
 
     return county_records
 
+def archive_fire_weather_forecast(
+    forecast: dict,
+    existing_archive: dict,
+) -> dict:
+    forecast_date = forecast.get("date")
+
+    if not forecast_date:
+        return existing_archive
+
+    existing_archive[forecast_date] = forecast
+
+    return dict(sorted(existing_archive.items()))
+
 def evaluate_fire_weather_forecast(
     forecast: dict,
     actuals: dict,
@@ -387,18 +401,30 @@ def update_fire_weather_files() -> tuple[dict, dict]:
 
     save_json_to_both("county_fire_weather.json", county_fire_weather)
 
+    forecast_archive = load_json("fire_weather_forecast_archive.json", {})
+    forecast_archive = archive_fire_weather_forecast(
+        forecast=forecast,
+        existing_archive=forecast_archive,
+    )
+
+    matching_forecast = forecast_archive.get(actuals.get("date"))
+
     existing_evaluations = load_json("fire_weather_evaluations.json", [])
 
-    evaluations = evaluate_fire_weather_forecast(
-        forecast=forecast,
-        actuals=actuals,
-        existing_evaluations=existing_evaluations,
-    )
+    if matching_forecast:
+        evaluations = evaluate_fire_weather_forecast(
+            forecast=matching_forecast,
+            actuals=actuals,
+         existing_evaluations=existing_evaluations,
+        )
+    else:
+        evaluations = existing_evaluations
 
     metrics = build_fire_weather_metrics(evaluations)
 
     save_json_to_both("fire_weather_evaluations.json", evaluations)
     save_json_to_both("fire_weather_metrics.json", metrics)
+    save_json_to_both("fire_weather_forecast_archive.json", forecast_archive)
 
     return forecast, actuals
 
@@ -406,6 +432,7 @@ def update_fire_weather_files() -> tuple[dict, dict]:
 if __name__ == "__main__":
     ensure_fire_weather_files()
     forecast_data, actuals_data = update_fire_weather_files()
+    
 
     print("Fire weather data updated.")
     print(f"Forecast date: {forecast_data.get('date')}")
