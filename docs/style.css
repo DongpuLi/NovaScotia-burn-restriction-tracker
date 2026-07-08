@@ -593,3 +593,40 @@ body.status-offseason {
       url("assets/bg-offseason.jpg") !important;
   }
 }
+.fire-weather-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.fire-weather-item {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.fire-weather-item strong {
+  display: block;
+  font-size: 1.35rem;
+  margin-bottom: 4px;
+}
+
+.fire-weather-item span {
+  font-size: 0.78rem;
+  opacity: 0.78;
+}
+
+.fire-weather-stations {
+  grid-column: 1 / -1;
+  font-size: 0.82rem;
+  opacity: 0.78;
+  line-height: 1.4;
+}
+.prediction-disclaimer {
+  margin: 10px 0 14px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  opacity: 0.76;
+}

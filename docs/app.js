@@ -2,6 +2,7 @@ const DEFAULT_COUNTY_ID = "Halifax-County";
 
 let countiesById = {};
 let selectedCountyId = DEFAULT_COUNTY_ID;
+let countyFireWeatherById = {};
 let siteMode = "active";
 let predictionsByCounty = {};
 let metricsByCounty = {};
@@ -217,7 +218,7 @@ function updateSelectedCounty(countyId) {
   }
 const predictionTitle = document.getElementById("prediction-title");
 if (predictionTitle) {
-  predictionTitle.textContent = `7-day ${county.name} prediction`;
+  predictionTitle.textContent = `Experimental 7-day ${county.name} risk outlook`;
 }
 
 const historyTitle = document.getElementById("history-title");
@@ -232,6 +233,7 @@ if (historyTitle) {
   const svgEl = document.querySelector(`#${safeCssEscape(svgId)}`);
   if (svgEl) svgEl.classList.add("county-selected");
 
+  renderOfficialFireWeather(county.id);
   renderPredictions(predictionsByCounty[county.id] || []);
   renderMetrics(metricsByCounty[county.id] || null);
   renderHistory(historyByCounty[county.id] || []);
@@ -362,15 +364,96 @@ function renderHistory(history) {
   });
 }
 
+function renderOfficialFireWeather(countyId) {
+  const titleEl = document.getElementById("official-fire-weather-title");
+  const el = document.getElementById("official-fire-weather");
+
+  if (!el) return;
+
+  const county = countiesById[countyId] || countiesById[DEFAULT_COUNTY_ID];
+  const record = countyFireWeatherById[countyId];
+
+  if (titleEl && county) {
+    titleEl.textContent = `Official ${county.name} Fire Weather Forecast`;
+  }
+
+  if (!record) {
+    el.textContent = "No official fire weather data available for this county yet.";
+    return;
+  }
+
+  function value(v) {
+    return v === null || v === undefined ? "—" : v;
+  }
+
+  el.innerHTML = `
+    <div class="fire-weather-item">
+      <strong>${value(record.fwi)}</strong>
+      <span>FWI</span>
+    </div>
+
+    <div class="fire-weather-item">
+      <strong>${value(record.ffmc)}</strong>
+      <span>FFMC</span>
+    </div>
+
+    <div class="fire-weather-item">
+      <strong>${value(record.dmc)}</strong>
+      <span>DMC</span>
+    </div>
+
+    <div class="fire-weather-item">
+      <strong>${value(record.dc)}</strong>
+      <span>DC</span>
+    </div>
+
+    <div class="fire-weather-item">
+      <strong>${value(record.isi)}</strong>
+      <span>ISI</span>
+    </div>
+
+    <div class="fire-weather-item">
+      <strong>${value(record.bui)}</strong>
+      <span>BUI</span>
+    </div>
+
+    <div class="fire-weather-item">
+      <strong>${value(record.temp_c)}°C</strong>
+      <span>Max station temperature</span>
+    </div>
+
+    <div class="fire-weather-item">
+      <strong>${value(record.rh_percent)}%</strong>
+      <span>Lowest station RH</span>
+    </div>
+
+    <div class="fire-weather-item">
+      <strong>${value(record.wind_speed_kph)} kph</strong>
+      <span>Max station wind</span>
+    </div>
+
+    <div class="fire-weather-item">
+      <strong>${value(record.rain_24h_mm)} mm</strong>
+      <span>Max 24h rain</span>
+    </div>
+
+    <div class="fire-weather-stations">
+      Stations used: ${(record.stations || []).join(", ") || "—"}
+    </div>
+  `;
+}
+
 async function main() {
   try {
     const latest = await loadJSON("latest.json");
     siteMode = latest.site_mode || "active";
+
     const counties = await loadJSON("counties.json", { counties: [] });
 
     predictionsByCounty = await loadJSON("county_prediction.json", {});
     metricsByCounty = await loadJSON("county_metrics.json", {});
     historyByCounty = await loadJSON("county_history.json", {});
+    countyFireWeatherById = await loadJSON("county_fire_weather.json", {});
 
     const updatedEl = document.getElementById("updated");
     if (updatedEl) {
