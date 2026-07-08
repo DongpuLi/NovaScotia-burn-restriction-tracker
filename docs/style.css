@@ -645,3 +645,52 @@ body.status-offseason {
   font-weight: 700;
   opacity: 0.78;
 }
+.fwi-summary {
+  grid-column: 1 / -1;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.fwi-level {
+  font-size: 1.55rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.fwi-number {
+  margin-top: 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.fwi-note {
+  margin-top: 4px;
+  font-size: 0.82rem;
+  opacity: 0.78;
+}
+
+.fwi-low {
+  box-shadow: inset 0 0 0 1px rgba(52, 152, 219, 0.45);
+}
+
+.fwi-moderate {
+  box-shadow: inset 0 0 0 1px rgba(46, 204, 64, 0.45);
+}
+
+.fwi-high {
+  box-shadow: inset 0 0 0 1px rgba(255, 221, 0, 0.5);
+}
+
+.fwi-very-high {
+  box-shadow: inset 0 0 0 1px rgba(255, 149, 0, 0.5);
+}
+
+.fwi-extreme {
+  box-shadow: inset 0 0 0 1px rgba(255, 59, 48, 0.55);
+}
+
+.fwi-unknown {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}

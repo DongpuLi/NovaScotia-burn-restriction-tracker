@@ -401,6 +401,30 @@ function renderHistory(history) {
   });
 }
 
+function classifyFwi(fwi) {
+  if (fwi === null || fwi === undefined) {
+    return { label: "Unknown", className: "fwi-unknown", dot: "⚪" };
+  }
+
+  if (fwi < 4) {
+    return { label: "Low", className: "fwi-low", dot: "🔵" };
+  }
+
+  if (fwi < 10) {
+    return { label: "Moderate", className: "fwi-moderate", dot: "🟢" };
+  }
+
+  if (fwi < 17) {
+    return { label: "High", className: "fwi-high", dot: "🟡" };
+  }
+
+  if (fwi < 23) {
+    return { label: "Very High", className: "fwi-very-high", dot: "🟠" };
+  }
+
+  return { label: "Extreme", className: "fwi-extreme", dot: "🔴" };
+}
+
 function renderOfficialFireWeather(countyId) {
   const titleEl = document.getElementById("official-fire-weather-title");
   const el = document.getElementById("official-fire-weather");
@@ -423,35 +447,28 @@ function renderOfficialFireWeather(countyId) {
     return v === null || v === undefined ? "—" : v;
   }
 
+  const fwiClass = classifyFwi(record.fwi);
+
   el.innerHTML = `
-    <div class="fire-weather-item">
-      <strong>${value(record.fwi)}</strong>
-      <span>FWI</span>
+    <div class="fwi-summary ${fwiClass.className}">
+      <div class="fwi-level">${fwiClass.dot} ${fwiClass.label}</div>
+      <div class="fwi-number">FWI ${value(record.fwi)}</div>
+      <div class="fwi-note">Official Fire Weather Index category</div>
     </div>
 
     <div class="fire-weather-item">
       <strong>${value(record.ffmc)}</strong>
-      <span>FFMC</span>
-    </div>
-
-    <div class="fire-weather-item">
-      <strong>${value(record.dmc)}</strong>
-      <span>DMC</span>
-    </div>
-
-    <div class="fire-weather-item">
-      <strong>${value(record.dc)}</strong>
-      <span>DC</span>
+      <span>FFMC · ignition potential</span>
     </div>
 
     <div class="fire-weather-item">
       <strong>${value(record.isi)}</strong>
-      <span>ISI</span>
+      <span>ISI · spread potential</span>
     </div>
 
     <div class="fire-weather-item">
       <strong>${value(record.bui)}</strong>
-      <span>BUI</span>
+      <span>BUI · fuel available</span>
     </div>
 
     <div class="fire-weather-item">
@@ -469,23 +486,19 @@ function renderOfficialFireWeather(countyId) {
       <span>Max station wind</span>
     </div>
 
-    <div class="fire-weather-item">
-      <strong>${value(record.rain_24h_mm)} mm</strong>
-      <span>Max 24h rain</span>
-    </div>
-
     <div class="fire-weather-stations">
       <div>Stations used: ${(record.stations || []).join(", ") || "—"}</div>
       <div>Forecast date: ${fireWeatherForecast?.date || record.date || "—"}</div>
+      <div>Latest actuals date: ${fireWeatherActuals?.date || "—"}</div>
       <div>Station-level forecast records: ${
         fireWeatherForecast?.stations
           ? Object.keys(fireWeatherForecast.stations).length
           : "—"
       }</div>
-      <div>Latest actuals date: ${fireWeatherActuals?.date || "—"}</div>
     </div>
   `;
 }
+
 
 async function main() {
   try {
