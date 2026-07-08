@@ -29,7 +29,7 @@ from burnsafe import fetch_all_counties, fetch_status
 from predictor import predict_many
 from weather import fetch_all_county_weather, fetch_weather_forecast
 
-from fire_weather import ensure_fire_weather_files
+from fire_weather import ensure_fire_weather_files, update_fire_weather_files
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -309,6 +309,7 @@ def archive_county_predictions(
 
 def main() -> None:
     ensure_fire_weather_files()
+    fire_weather_forecast, fire_weather_actuals = update_fire_weather_files()
 
     now = datetime.now(TIMEZONE)
     today = now.date().isoformat()
@@ -472,5 +473,7 @@ def main() -> None:
     print(f"Parsed {len(counties)} counties.")
     print(f"Generated county weather for {len(county_weather)} counties.")
     print(f"Generated county predictions for {len(predictions_by_county)} counties.")
+    print(f"Fire weather forecast stations: {len(fire_weather_forecast.get('stations', {}))}")
+    print(f"Fire weather actuals stations: {len(fire_weather_actuals.get('stations', {}))}")
 if __name__ == "__main__":
     main()
