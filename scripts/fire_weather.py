@@ -73,7 +73,6 @@ def ensure_fire_weather_files() -> None:
             "stations": {},
         },
         "county_fire_weather.json": {},
-        "station_county_map.json": {},
     }
 
     for filename, default_data in files.items():
@@ -209,6 +208,70 @@ def fetch_fire_weather_actuals() -> dict:
     }
 
 
+def build_county_fire_weather(
+    forecast: dict,
+    station_county_map: dict,
+) -> dict:
+    county_records = {}
+
+    for station_name, station_record in forecast.get("stations", {}).items():
+        county_ids = station_county_map.get(station_name, [])
+
+        for county_id in county_ids:
+            county = county_records.setdefault(
+                county_id,
+                {
+                    "county_id": county_id,
+                    "date": forecast.get("date"),
+                    "updated_at": forecast.get("updated_at"),
+                    "timezone": forecast.get("timezone", "America/Halifax"),
+                    "source": forecast.get("source"),
+                    "stations": [],
+                    "station_count": 0,
+                    "aggregation": "max",
+                    "temp_c": None,
+                    "rh_percent": None,
+                    "wind_speed_kph": None,
+                    "rain_24h_mm": None,
+                    "ffmc": None,
+                    "dmc": None,
+                    "dc": None,
+                    "isi": None,
+                    "bui": None,
+                    "fwi": None,
+                },
+            )
+
+            county["stations"].append(station_name)
+
+            for key in [
+                "temp_c",
+                "wind_speed_kph",
+                "rain_24h_mm",
+                "ffmc",
+                "dmc",
+                "dc",
+                "isi",
+                "bui",
+                "fwi",
+            ]:
+                value = station_record.get(key)
+                if value is None:
+                    continue
+                if county[key] is None or value > county[key]:
+                    county[key] = value
+
+            rh = station_record.get("rh_percent")
+            if rh is not None:
+                if county["rh_percent"] is None or rh < county["rh_percent"]:
+                    county["rh_percent"] = rh
+
+    for county in county_records.values():
+        county["stations"] = sorted(set(county["stations"]))
+        county["station_count"] = len(county["stations"])
+
+    return county_records
+
 def update_fire_weather_files() -> tuple[dict, dict]:
     forecast = fetch_fire_weather_forecast()
     actuals = fetch_fire_weather_actuals()
@@ -216,12 +279,14 @@ def update_fire_weather_files() -> tuple[dict, dict]:
     save_json_to_both("fire_weather_forecast.json", forecast)
     save_json_to_both("fire_weather_actuals.json", actuals)
 
-    # County aggregation comes in the next step.
-    county_fire_weather = load_json("county_fire_weather.json", {})
     station_county_map = load_json("station_county_map.json", {})
 
+    county_fire_weather = build_county_fire_weather(
+        forecast=forecast,
+        station_county_map=station_county_map,
+    )
+
     save_json_to_both("county_fire_weather.json", county_fire_weather)
-    save_json_to_both("station_county_map.json", station_county_map)
 
     return forecast, actuals
 
