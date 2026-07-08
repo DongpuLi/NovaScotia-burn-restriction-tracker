@@ -30,6 +30,7 @@ from predictor import predict_many
 from weather import fetch_all_county_weather, fetch_weather_forecast
 
 from fire_weather import ensure_fire_weather_files, update_fire_weather_files
+from xml.etree.ElementTree import Element, SubElement, ElementTree
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -306,6 +307,29 @@ def archive_county_predictions(
 
     return county_archive
 
+def write_sitemap(today: str) -> None:
+    urlset = Element(
+        "urlset",
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9",
+    )
+
+    url = SubElement(urlset, "url")
+
+    SubElement(url, "loc").text = (
+        "https://dongpuli.github.io/NovaScotia-burn-restriction-tracker/"
+    )
+
+    SubElement(url, "lastmod").text = today
+    SubElement(url, "changefreq").text = "daily"
+    SubElement(url, "priority").text = "1.0"
+
+    for directory in (DATA_DIR, DOCS_DIR):
+        ElementTree(urlset).write(
+            directory / "sitemap.xml",
+            encoding="utf-8",
+            xml_declaration=True,
+        )
+
 
 def main() -> None:
     now = datetime.now(TIMEZONE)
@@ -466,6 +490,8 @@ def main() -> None:
     save_json_to_both("county_predictions_archive.json", county_archive)
     save_json_to_both("county_learning.json", county_learning)
     save_json_to_both("county_metrics.json", county_metrics)
+
+    write_sitemap(today)
 
     print("Updated.")
     print(f"Halifax time: {now.isoformat(timespec='seconds')}")
