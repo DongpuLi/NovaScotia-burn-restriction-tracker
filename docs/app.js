@@ -3,6 +3,7 @@ const DEFAULT_COUNTY_ID = "Halifax-County";
 let countiesById = {};
 let selectedCountyId = DEFAULT_COUNTY_ID;
 let countyFireWeatherById = {};
+let fireWeatherMetrics = null;
 let siteMode = "active";
 let predictionsByCounty = {};
 let metricsByCounty = {};
@@ -341,7 +342,23 @@ function renderOfficialMetrics() {
   const el = document.getElementById("official-metrics");
   if (!el) return;
 
-  el.textContent = "Official FWI forecast evaluation will begin after forecast and actual records are collected.";
+  if (!fireWeatherMetrics || !fireWeatherMetrics.total_evaluated) {
+    el.textContent =
+      "Official FWI forecast evaluation will begin after forecast and actual records are collected.";
+    return;
+  }
+
+  const accuracy = Math.round(fireWeatherMetrics.class_accuracy * 100);
+  const mae = fireWeatherMetrics.mean_absolute_error;
+
+  el.innerHTML = `
+    <div><strong>${accuracy}%</strong> FWI class accuracy</div>
+    <div>
+      ${fireWeatherMetrics.correct_class} / ${fireWeatherMetrics.total_evaluated}
+      station forecasts matched actual FWI class
+    </div>
+    <div>Mean absolute FWI error: ${mae ?? "—"}</div>
+  `;
 }
 
 function renderHistory(history) {
@@ -462,6 +479,7 @@ async function main() {
     metricsByCounty = await loadJSON("county_metrics.json", {});
     historyByCounty = await loadJSON("county_history.json", {});
     countyFireWeatherById = await loadJSON("county_fire_weather.json", {});
+    fireWeatherMetrics = await loadJSON("fire_weather_metrics.json", null);
 
     const updatedEl = document.getElementById("updated");
     if (updatedEl) {
