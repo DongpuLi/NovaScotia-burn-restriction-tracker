@@ -29,6 +29,8 @@ from burnsafe import fetch_all_counties, fetch_status
 from predictor import predict_many
 from weather import fetch_all_county_weather, fetch_weather_forecast
 
+from fire_weather import ensure_fire_weather_files
+
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -306,6 +308,8 @@ def archive_county_predictions(
 
 
 def main() -> None:
+    ensure_fire_weather_files()
+
     now = datetime.now(TIMEZONE)
     today = now.date().isoformat()
     in_burn_season = is_burn_season(now)
