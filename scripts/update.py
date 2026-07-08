@@ -308,11 +308,20 @@ def archive_county_predictions(
 
 
 def main() -> None:
+    now = datetime.now(TIMEZONE)
+    today = now.date().isoformat()
+
     ensure_fire_weather_files()
     fire_weather_forecast, fire_weather_actuals = update_fire_weather_files()
 
-    now = datetime.now(TIMEZONE)
-    today = now.date().isoformat()
+    is_fire_weather_only_run = now.hour < POSTING_HOUR
+
+    if is_fire_weather_only_run:
+        print("Fire weather only update.")
+        print(f"Halifax time: {now.isoformat(timespec='seconds')}")
+        print(f"Fire weather forecast stations: {len(fire_weather_forecast.get('stations', {}))}")
+        print(f"Fire weather actuals stations: {len(fire_weather_actuals.get('stations', {}))}")
+        return
     in_burn_season = is_burn_season(now)
 
     previous_latest = load_json("latest.json", None)
