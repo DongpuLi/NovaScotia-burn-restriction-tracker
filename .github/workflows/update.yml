@@ -3,6 +3,7 @@ name: Daily Nova Scotia Burn Update
 on:
   workflow_dispatch:
   schedule:
+    - cron: "33-48/5 13 * * *"
     - cron: "1-16/5 15 * * *"
 
 permissions:
