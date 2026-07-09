@@ -21,6 +21,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Show trigger context
+        run: |
+          echo "event_name=${{ github.event_name }}"
+          echo "schedule=${{ github.event.schedule }}"
+          echo "utc_time=$(date -u)"
+          echo "runner_time=$(date)"
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
