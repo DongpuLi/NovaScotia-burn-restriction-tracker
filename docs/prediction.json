@@ -6,7 +6,7 @@
     "confidence": 76,
     "model": "official_fwi_refined",
     "score": 2,
-    "reason": "official FWI category: high, FWI 13.9, FFMC 89.2, ISI 4.4, restricted burning window is more appropriate",
+    "reason": "official FWI category: high, FWI 10.2, FFMC 86.8, ISI 3.2, restricted burning window is more appropriate",
     "weather": {
       "date": "2026-07-09",
       "temperature_max_c": 23.3,
@@ -20,8 +20,8 @@
     },
     "official_fire_weather": {
       "county_id": "Halifax-County",
-      "date": "2026-07-09",
-      "updated_at": "2026-07-09T12:53:35-03:00",
+      "date": "2026-07-10",
+      "updated_at": "2026-07-09T13:27:16-03:00",
       "timezone": "America/Halifax",
       "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
       "stations": [
@@ -34,15 +34,15 @@
       "station_count": 5,
       "aggregation": "max",
       "temp_c": 25.7,
-      "rh_percent": 55.7,
-      "wind_speed_kph": 3.2,
-      "rain_24h_mm": 0.0,
-      "ffmc": 89.2,
-      "dmc": 45.0,
-      "dc": 290.5,
-      "isi": 4.4,
-      "bui": 64.8,
-      "fwi": 13.9
+      "rh_percent": 62.7,
+      "wind_speed_kph": 3.1,
+      "rain_24h_mm": 0.8,
+      "ffmc": 86.8,
+      "dmc": 46.7,
+      "dc": 298.3,
+      "isi": 3.2,
+      "bui": 66.7,
+      "fwi": 10.2
     }
   },
   {
