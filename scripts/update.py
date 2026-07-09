@@ -308,27 +308,32 @@ def archive_county_predictions(
     return county_archive
 
 def write_sitemap(today: str) -> None:
-    urlset = Element(
-        "urlset",
-        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9",
-    )
+    sitemap_index = f'''<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://dongpuli.github.io/NovaScotia-burn-restriction-tracker/sitemap-main.xml</loc>
+    <lastmod>{today}</lastmod>
+  </sitemap>
+</sitemapindex>
+'''
 
-    url = SubElement(urlset, "url")
-
-    SubElement(url, "loc").text = (
-        "https://dongpuli.github.io/NovaScotia-burn-restriction-tracker/"
-    )
-
-    SubElement(url, "lastmod").text = today
-    SubElement(url, "changefreq").text = "daily"
-    SubElement(url, "priority").text = "1.0"
+    sitemap_main = f'''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://dongpuli.github.io/NovaScotia-burn-restriction-tracker/</loc>
+    <lastmod>{today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+'''
 
     for directory in (DATA_DIR, DOCS_DIR):
-        ElementTree(urlset).write(
-            directory / "sitemap.xml",
-            encoding="utf-8",
-            xml_declaration=True,
-        )
+        with open(directory / "sitemap.xml", "w", encoding="utf-8") as f:
+            f.write(sitemap_index)
+
+        with open(directory / "sitemap-main.xml", "w", encoding="utf-8") as f:
+            f.write(sitemap_main)
 
 
 def main() -> None:
