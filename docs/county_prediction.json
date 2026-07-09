@@ -10,19 +10,19 @@
       "reason": "official FWI category: high, FWI 15.1, FFMC 89.8, ISI 4.9, restricted burning window is more appropriate",
       "weather": {
         "date": "2026-07-09",
-        "temperature_max_c": 29.1,
+        "temperature_max_c": 29.3,
         "temperature_min_c": 13.6,
         "humidity_mean_percent": 65,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 19.6,
-        "wind_gust_max_kmh": 27.7,
+        "wind_max_kmh": 18.4,
+        "wind_gust_max_kmh": 30.2,
         "dry_streak_days": 1
       },
       "official_fire_weather": {
         "county_id": "Annapolis-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -58,7 +58,7 @@
         "precipitation_mm": 1.8,
         "rain_mm": 1.8,
         "wind_max_kmh": 11.5,
-        "wind_gust_max_kmh": 15.5,
+        "wind_gust_max_kmh": 17.6,
         "dry_streak_days": 0
       },
       "official_fire_weather": null
@@ -192,7 +192,7 @@
       "official_fire_weather": {
         "county_id": "Antigonish-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -362,7 +362,7 @@
       "official_fire_weather": {
         "county_id": "Cape-Breton-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -520,19 +520,19 @@
       "reason": "official FWI category: low, FWI 0.8, FFMC 62.3, ISI 0.5, low official fire-weather conditions",
       "weather": {
         "date": "2026-07-09",
-        "temperature_max_c": 28.4,
+        "temperature_max_c": 28.7,
         "temperature_min_c": 15.8,
-        "humidity_mean_percent": 73,
+        "humidity_mean_percent": 72,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 18.3,
-        "wind_gust_max_kmh": 33.1,
+        "wind_max_kmh": 17.7,
+        "wind_gust_max_kmh": 32.0,
         "dry_streak_days": 1
       },
       "official_fire_weather": {
         "county_id": "Colchester-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -566,7 +566,7 @@
         "date": "2026-07-10",
         "temperature_max_c": 23.2,
         "temperature_min_c": 16.5,
-        "humidity_mean_percent": 82,
+        "humidity_mean_percent": 81,
         "precipitation_mm": 4.0,
         "rain_mm": 4.0,
         "wind_max_kmh": 14.6,
@@ -688,23 +688,23 @@
       "predicted_level": "green",
       "confidence": 78,
       "model": "official_fwi_refined",
-      "score": 2,
+      "score": 3,
       "reason": "official FWI category: low, FWI 0.0, FFMC 36.3, ISI 0.0, low official fire-weather conditions",
       "weather": {
         "date": "2026-07-09",
-        "temperature_max_c": 26.0,
+        "temperature_max_c": 26.2,
         "temperature_min_c": 14.4,
-        "humidity_mean_percent": 74,
-        "precipitation_mm": 2.9,
-        "rain_mm": 2.9,
-        "wind_max_kmh": 24.1,
-        "wind_gust_max_kmh": 35.3,
-        "dry_streak_days": 0
+        "humidity_mean_percent": 75,
+        "precipitation_mm": 0.0,
+        "rain_mm": 0.0,
+        "wind_max_kmh": 24.5,
+        "wind_gust_max_kmh": 35.6,
+        "dry_streak_days": 1
       },
       "official_fire_weather": {
         "county_id": "Cumberland-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -736,12 +736,12 @@
       "weather": {
         "date": "2026-07-10",
         "temperature_max_c": 21.5,
-        "temperature_min_c": 17.1,
-        "humidity_mean_percent": 88,
-        "precipitation_mm": 10.0,
-        "rain_mm": 10.0,
-        "wind_max_kmh": 12.0,
-        "wind_gust_max_kmh": 21.6,
+        "temperature_min_c": 17.2,
+        "humidity_mean_percent": 87,
+        "precipitation_mm": 14.7,
+        "rain_mm": 14.7,
+        "wind_max_kmh": 12.2,
+        "wind_gust_max_kmh": 27.4,
         "dry_streak_days": 0
       },
       "official_fire_weather": null
@@ -859,23 +859,23 @@
       "predicted_level": "yellow",
       "confidence": 70,
       "model": "official_fwi_refined",
-      "score": 3,
+      "score": 2,
       "reason": "official FWI category: moderate, FWI 9.5, FFMC 86.2, ISI 3.0, restricted burning window is more appropriate",
       "weather": {
         "date": "2026-07-09",
-        "temperature_max_c": 27.0,
+        "temperature_max_c": 27.8,
         "temperature_min_c": 12.5,
         "humidity_mean_percent": 69,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 20.1,
-        "wind_gust_max_kmh": 29.9,
+        "wind_max_kmh": 19.9,
+        "wind_gust_max_kmh": 32.0,
         "dry_streak_days": 1
       },
       "official_fire_weather": {
         "county_id": "Digby-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -907,11 +907,11 @@
         "date": "2026-07-10",
         "temperature_max_c": 21.7,
         "temperature_min_c": 16.9,
-        "humidity_mean_percent": 86,
-        "precipitation_mm": 1.1,
-        "rain_mm": 1.1,
-        "wind_max_kmh": 11.3,
-        "wind_gust_max_kmh": 15.5,
+        "humidity_mean_percent": 85,
+        "precipitation_mm": 1.8,
+        "rain_mm": 1.8,
+        "wind_max_kmh": 11.8,
+        "wind_gust_max_kmh": 20.9,
         "dry_streak_days": 0
       },
       "official_fire_weather": null
@@ -1045,7 +1045,7 @@
       "official_fire_weather": {
         "county_id": "Guysborough-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -1205,19 +1205,19 @@
       "reason": "official FWI category: high, FWI 10.2, FFMC 86.8, ISI 3.2, restricted burning window is more appropriate",
       "weather": {
         "date": "2026-07-09",
-        "temperature_max_c": 23.3,
+        "temperature_max_c": 23.6,
         "temperature_min_c": 14.6,
         "humidity_mean_percent": 91,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 14.3,
+        "wind_max_kmh": 15.2,
         "wind_gust_max_kmh": 20.2,
         "dry_streak_days": 1
       },
       "official_fire_weather": {
         "county_id": "Halifax-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -1252,7 +1252,7 @@
       "weather": {
         "date": "2026-07-10",
         "temperature_max_c": 23.6,
-        "temperature_min_c": 14.6,
+        "temperature_min_c": 14.4,
         "humidity_mean_percent": 91,
         "precipitation_mm": 1.1,
         "rain_mm": 1.1,
@@ -1379,19 +1379,19 @@
       "reason": "official FWI category: moderate, FWI 6.1, FFMC 82.9, ISI 1.9, restricted burning window is more appropriate",
       "weather": {
         "date": "2026-07-09",
-        "temperature_max_c": 30.0,
+        "temperature_max_c": 29.5,
         "temperature_min_c": 14.5,
         "humidity_mean_percent": 71,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 16.6,
-        "wind_gust_max_kmh": 24.5,
+        "wind_max_kmh": 17.3,
+        "wind_gust_max_kmh": 23.8,
         "dry_streak_days": 1
       },
       "official_fire_weather": {
         "county_id": "Hants-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -1562,7 +1562,7 @@
       "official_fire_weather": {
         "county_id": "Inverness-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -1720,19 +1720,19 @@
       "reason": "official FWI category: low, FWI 2.1, FFMC 68.8, ISI 0.7, low official fire-weather conditions",
       "weather": {
         "date": "2026-07-09",
-        "temperature_max_c": 30.1,
+        "temperature_max_c": 30.2,
         "temperature_min_c": 13.7,
-        "humidity_mean_percent": 68,
+        "humidity_mean_percent": 67,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 18.8,
-        "wind_gust_max_kmh": 35.6,
+        "wind_max_kmh": 19.9,
+        "wind_gust_max_kmh": 28.4,
         "dry_streak_days": 1
       },
       "official_fire_weather": {
         "county_id": "Kings-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -1765,11 +1765,11 @@
         "date": "2026-07-10",
         "temperature_max_c": 22.3,
         "temperature_min_c": 17.1,
-        "humidity_mean_percent": 83,
+        "humidity_mean_percent": 80,
         "precipitation_mm": 1.9,
         "rain_mm": 1.9,
-        "wind_max_kmh": 12.3,
-        "wind_gust_max_kmh": 24.1,
+        "wind_max_kmh": 15.5,
+        "wind_gust_max_kmh": 29.9,
         "dry_streak_days": 0
       },
       "official_fire_weather": null
@@ -1887,23 +1887,23 @@
       "predicted_level": "yellow",
       "confidence": 76,
       "model": "official_fwi_refined",
-      "score": 3,
+      "score": 2,
       "reason": "official FWI category: very_high, FWI 18.0, FFMC 90.7, ISI 5.7, restricted burning window is more appropriate",
       "weather": {
         "date": "2026-07-09",
-        "temperature_max_c": 28.4,
+        "temperature_max_c": 27.3,
         "temperature_min_c": 14.7,
-        "humidity_mean_percent": 84,
+        "humidity_mean_percent": 85,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 14.8,
-        "wind_gust_max_kmh": 24.5,
+        "wind_max_kmh": 15.8,
+        "wind_gust_max_kmh": 25.9,
         "dry_streak_days": 1
       },
       "official_fire_weather": {
         "county_id": "Lunenburg-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -1935,8 +1935,8 @@
       "weather": {
         "date": "2026-07-10",
         "temperature_max_c": 23.9,
-        "temperature_min_c": 15.0,
-        "humidity_mean_percent": 89,
+        "temperature_min_c": 16.2,
+        "humidity_mean_percent": 88,
         "precipitation_mm": 9.0,
         "rain_mm": 9.0,
         "wind_max_kmh": 11.0,
@@ -2062,19 +2062,19 @@
       "reason": "official FWI category: low, FWI 0.4, FFMC 55.4, ISI 0.3, low official fire-weather conditions",
       "weather": {
         "date": "2026-07-09",
-        "temperature_max_c": 29.8,
+        "temperature_max_c": 30.1,
         "temperature_min_c": 16.2,
         "humidity_mean_percent": 66,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 20.9,
-        "wind_gust_max_kmh": 30.6,
+        "wind_max_kmh": 20.1,
+        "wind_gust_max_kmh": 31.0,
         "dry_streak_days": 1
       },
       "official_fire_weather": {
         "county_id": "Pictou-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -2106,7 +2106,7 @@
         "date": "2026-07-10",
         "temperature_max_c": 23.2,
         "temperature_min_c": 15.9,
-        "humidity_mean_percent": 87,
+        "humidity_mean_percent": 89,
         "precipitation_mm": 6.4,
         "rain_mm": 6.4,
         "wind_max_kmh": 18.1,
@@ -2228,23 +2228,23 @@
       "predicted_level": "yellow",
       "confidence": 76,
       "model": "official_fwi_refined",
-      "score": 3,
+      "score": 2,
       "reason": "official FWI category: high, FWI 10.6, FFMC 87.4, ISI 3.4, restricted burning window is more appropriate",
       "weather": {
         "date": "2026-07-09",
-        "temperature_max_c": 28.0,
+        "temperature_max_c": 27.9,
         "temperature_min_c": 15.9,
         "humidity_mean_percent": 78,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 15.3,
-        "wind_gust_max_kmh": 24.8,
+        "wind_max_kmh": 15.5,
+        "wind_gust_max_kmh": 27.4,
         "dry_streak_days": 1
       },
       "official_fire_weather": {
         "county_id": "Queens-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -2276,8 +2276,8 @@
       "weather": {
         "date": "2026-07-10",
         "temperature_max_c": 24.5,
-        "temperature_min_c": 16.1,
-        "humidity_mean_percent": 87,
+        "temperature_min_c": 16.4,
+        "humidity_mean_percent": 86,
         "precipitation_mm": 21.6,
         "rain_mm": 21.6,
         "wind_max_kmh": 13.6,
@@ -2415,7 +2415,7 @@
       "official_fire_weather": {
         "county_id": "Richmond-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -2573,19 +2573,19 @@
       "reason": "official FWI category: high, FWI 16.0, FFMC 90.0, ISI 5.0, restricted burning window is more appropriate",
       "weather": {
         "date": "2026-07-09",
-        "temperature_max_c": 25.3,
+        "temperature_max_c": 25.5,
         "temperature_min_c": 15.8,
-        "humidity_mean_percent": 84,
+        "humidity_mean_percent": 83,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 15.3,
-        "wind_gust_max_kmh": 25.9,
+        "wind_max_kmh": 15.5,
+        "wind_gust_max_kmh": 26.6,
         "dry_streak_days": 1
       },
       "official_fire_weather": {
         "county_id": "Shelburne-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -2617,7 +2617,7 @@
       "weather": {
         "date": "2026-07-10",
         "temperature_max_c": 24.6,
-        "temperature_min_c": 16.0,
+        "temperature_min_c": 16.2,
         "humidity_mean_percent": 93,
         "precipitation_mm": 0.4,
         "rain_mm": 0.4,
@@ -2756,7 +2756,7 @@
       "official_fire_weather": {
         "county_id": "Victoria-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -2914,19 +2914,19 @@
       "reason": "official FWI category: high, FWI 16.0, FFMC 89.7, ISI 5.0, restricted burning window is more appropriate",
       "weather": {
         "date": "2026-07-09",
-        "temperature_max_c": 21.5,
+        "temperature_max_c": 22.5,
         "temperature_min_c": 12.9,
-        "humidity_mean_percent": 89,
+        "humidity_mean_percent": 88,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 16.6,
-        "wind_gust_max_kmh": 24.8,
+        "wind_max_kmh": 15.9,
+        "wind_gust_max_kmh": 25.2,
         "dry_streak_days": 1
       },
       "official_fire_weather": {
         "county_id": "Yarmouth-County",
         "date": "2026-07-10",
-        "updated_at": "2026-07-09T13:27:16-03:00",
+        "updated_at": "2026-07-09T14:21:54-03:00",
         "timezone": "America/Halifax",
         "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
         "stations": [
@@ -2957,7 +2957,7 @@
       "weather": {
         "date": "2026-07-10",
         "temperature_max_c": 23.0,
-        "temperature_min_c": 15.1,
+        "temperature_min_c": 15.4,
         "humidity_mean_percent": 96,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
