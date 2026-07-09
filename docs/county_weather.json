@@ -7,33 +7,33 @@
     "forecast": [
       {
         "date": "2026-07-09",
-        "temperature_max_c": 28.3,
+        "temperature_max_c": 29.1,
         "temperature_min_c": 13.6,
-        "humidity_mean_percent": 69,
+        "humidity_mean_percent": 65,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
         "wind_max_kmh": 19.6,
-        "wind_gust_max_kmh": 30.2
+        "wind_gust_max_kmh": 27.7
       },
       {
         "date": "2026-07-10",
-        "temperature_max_c": 25.5,
-        "temperature_min_c": 18.1,
-        "humidity_mean_percent": 82,
-        "precipitation_mm": 0.4,
-        "rain_mm": 0.4,
-        "wind_max_kmh": 15.4,
-        "wind_gust_max_kmh": 29.9
+        "temperature_max_c": 22.9,
+        "temperature_min_c": 17.0,
+        "humidity_mean_percent": 83,
+        "precipitation_mm": 1.8,
+        "rain_mm": 1.8,
+        "wind_max_kmh": 11.5,
+        "wind_gust_max_kmh": 15.5
       },
       {
         "date": "2026-07-11",
         "temperature_max_c": 25.9,
-        "temperature_min_c": 14.8,
-        "humidity_mean_percent": 64,
+        "temperature_min_c": 14.3,
+        "humidity_mean_percent": 60,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
         "wind_max_kmh": 15.1,
-        "wind_gust_max_kmh": 20.2
+        "wind_gust_max_kmh": 18.7
       },
       {
         "date": "2026-07-12",
@@ -241,29 +241,29 @@
     "forecast": [
       {
         "date": "2026-07-09",
-        "temperature_max_c": 26.6,
+        "temperature_max_c": 28.4,
         "temperature_min_c": 15.8,
-        "humidity_mean_percent": 77,
+        "humidity_mean_percent": 73,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 19.8,
-        "wind_gust_max_kmh": 40.7
+        "wind_max_kmh": 18.3,
+        "wind_gust_max_kmh": 33.1
       },
       {
         "date": "2026-07-10",
-        "temperature_max_c": 24.8,
-        "temperature_min_c": 17.6,
+        "temperature_max_c": 23.2,
+        "temperature_min_c": 16.5,
         "humidity_mean_percent": 82,
-        "precipitation_mm": 1.5,
-        "rain_mm": 1.5,
-        "wind_max_kmh": 16.4,
-        "wind_gust_max_kmh": 23.4
+        "precipitation_mm": 4.0,
+        "rain_mm": 4.0,
+        "wind_max_kmh": 14.6,
+        "wind_gust_max_kmh": 25.6
       },
       {
         "date": "2026-07-11",
         "temperature_max_c": 24.5,
         "temperature_min_c": 11.9,
-        "humidity_mean_percent": 69,
+        "humidity_mean_percent": 70,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
         "wind_max_kmh": 17.7,
@@ -319,33 +319,33 @@
     "forecast": [
       {
         "date": "2026-07-09",
-        "temperature_max_c": 25.3,
+        "temperature_max_c": 26.0,
         "temperature_min_c": 14.4,
-        "humidity_mean_percent": 78,
-        "precipitation_mm": 0.0,
-        "rain_mm": 0.0,
-        "wind_max_kmh": 25.4,
-        "wind_gust_max_kmh": 37.8
+        "humidity_mean_percent": 74,
+        "precipitation_mm": 2.9,
+        "rain_mm": 2.9,
+        "wind_max_kmh": 24.1,
+        "wind_gust_max_kmh": 35.3
       },
       {
         "date": "2026-07-10",
-        "temperature_max_c": 22.7,
-        "temperature_min_c": 17.0,
-        "humidity_mean_percent": 89,
-        "precipitation_mm": 8.3,
-        "rain_mm": 8.3,
-        "wind_max_kmh": 11.2,
-        "wind_gust_max_kmh": 19.8
+        "temperature_max_c": 21.5,
+        "temperature_min_c": 17.1,
+        "humidity_mean_percent": 88,
+        "precipitation_mm": 10.0,
+        "rain_mm": 10.0,
+        "wind_max_kmh": 12.0,
+        "wind_gust_max_kmh": 21.6
       },
       {
         "date": "2026-07-11",
         "temperature_max_c": 23.4,
         "temperature_min_c": 12.2,
-        "humidity_mean_percent": 72,
-        "precipitation_mm": 0.0,
-        "rain_mm": 0.0,
+        "humidity_mean_percent": 73,
+        "precipitation_mm": 0.4,
+        "rain_mm": 0.4,
         "wind_max_kmh": 17.2,
-        "wind_gust_max_kmh": 25.9
+        "wind_gust_max_kmh": 20.5
       },
       {
         "date": "2026-07-12",
@@ -397,29 +397,29 @@
     "forecast": [
       {
         "date": "2026-07-09",
-        "temperature_max_c": 26.1,
+        "temperature_max_c": 27.0,
         "temperature_min_c": 12.5,
-        "humidity_mean_percent": 72,
+        "humidity_mean_percent": 69,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 20.6,
-        "wind_gust_max_kmh": 32.0
+        "wind_max_kmh": 20.1,
+        "wind_gust_max_kmh": 29.9
       },
       {
         "date": "2026-07-10",
-        "temperature_max_c": 25.3,
-        "temperature_min_c": 17.2,
-        "humidity_mean_percent": 82,
-        "precipitation_mm": 0.0,
-        "rain_mm": 0.0,
-        "wind_max_kmh": 13.8,
-        "wind_gust_max_kmh": 21.6
+        "temperature_max_c": 21.7,
+        "temperature_min_c": 16.9,
+        "humidity_mean_percent": 86,
+        "precipitation_mm": 1.1,
+        "rain_mm": 1.1,
+        "wind_max_kmh": 11.3,
+        "wind_gust_max_kmh": 15.5
       },
       {
         "date": "2026-07-11",
         "temperature_max_c": 25.2,
-        "temperature_min_c": 14.1,
-        "humidity_mean_percent": 65,
+        "temperature_min_c": 13.8,
+        "humidity_mean_percent": 62,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
         "wind_max_kmh": 15.1,
@@ -553,29 +553,29 @@
     "forecast": [
       {
         "date": "2026-07-09",
-        "temperature_max_c": 24.6,
+        "temperature_max_c": 23.3,
         "temperature_min_c": 14.6,
-        "humidity_mean_percent": 87,
+        "humidity_mean_percent": 91,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 16.1,
-        "wind_gust_max_kmh": 20.5
+        "wind_max_kmh": 14.3,
+        "wind_gust_max_kmh": 20.2
       },
       {
         "date": "2026-07-10",
-        "temperature_max_c": 24.0,
-        "temperature_min_c": 16.4,
-        "humidity_mean_percent": 86,
-        "precipitation_mm": 1.8,
-        "rain_mm": 1.8,
-        "wind_max_kmh": 14.3,
-        "wind_gust_max_kmh": 22.3
+        "temperature_max_c": 23.6,
+        "temperature_min_c": 14.6,
+        "humidity_mean_percent": 91,
+        "precipitation_mm": 1.1,
+        "rain_mm": 1.1,
+        "wind_max_kmh": 18.3,
+        "wind_gust_max_kmh": 28.4
       },
       {
         "date": "2026-07-11",
         "temperature_max_c": 26.7,
-        "temperature_min_c": 14.7,
-        "humidity_mean_percent": 65,
+        "temperature_min_c": 13.8,
+        "humidity_mean_percent": 64,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
         "wind_max_kmh": 19.1,
@@ -631,29 +631,29 @@
     "forecast": [
       {
         "date": "2026-07-09",
-        "temperature_max_c": 30.6,
+        "temperature_max_c": 30.0,
         "temperature_min_c": 14.5,
-        "humidity_mean_percent": 70,
+        "humidity_mean_percent": 71,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 16.8,
-        "wind_gust_max_kmh": 22.7
+        "wind_max_kmh": 16.6,
+        "wind_gust_max_kmh": 24.5
       },
       {
         "date": "2026-07-10",
-        "temperature_max_c": 26.4,
-        "temperature_min_c": 18.4,
-        "humidity_mean_percent": 74,
-        "precipitation_mm": 2.2,
-        "rain_mm": 2.2,
-        "wind_max_kmh": 24.5,
-        "wind_gust_max_kmh": 39.2
+        "temperature_max_c": 22.5,
+        "temperature_min_c": 17.7,
+        "humidity_mean_percent": 78,
+        "precipitation_mm": 0.8,
+        "rain_mm": 0.8,
+        "wind_max_kmh": 14.3,
+        "wind_gust_max_kmh": 20.5
       },
       {
         "date": "2026-07-11",
         "temperature_max_c": 25.3,
-        "temperature_min_c": 14.3,
-        "humidity_mean_percent": 69,
+        "temperature_min_c": 14.7,
+        "humidity_mean_percent": 68,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
         "wind_max_kmh": 17.6,
@@ -787,29 +787,29 @@
     "forecast": [
       {
         "date": "2026-07-09",
-        "temperature_max_c": 29.6,
+        "temperature_max_c": 30.1,
         "temperature_min_c": 13.7,
-        "humidity_mean_percent": 71,
+        "humidity_mean_percent": 68,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 19.8,
-        "wind_gust_max_kmh": 34.9
+        "wind_max_kmh": 18.8,
+        "wind_gust_max_kmh": 35.6
       },
       {
         "date": "2026-07-10",
-        "temperature_max_c": 26.1,
-        "temperature_min_c": 17.0,
-        "humidity_mean_percent": 80,
-        "precipitation_mm": 2.9,
-        "rain_mm": 2.9,
-        "wind_max_kmh": 21.3,
-        "wind_gust_max_kmh": 36.4
+        "temperature_max_c": 22.3,
+        "temperature_min_c": 17.1,
+        "humidity_mean_percent": 83,
+        "precipitation_mm": 1.9,
+        "rain_mm": 1.9,
+        "wind_max_kmh": 12.3,
+        "wind_gust_max_kmh": 24.1
       },
       {
         "date": "2026-07-11",
         "temperature_max_c": 24.8,
-        "temperature_min_c": 14.3,
-        "humidity_mean_percent": 69,
+        "temperature_min_c": 14.2,
+        "humidity_mean_percent": 68,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
         "wind_max_kmh": 17.8,
@@ -865,29 +865,29 @@
     "forecast": [
       {
         "date": "2026-07-09",
-        "temperature_max_c": 28.7,
+        "temperature_max_c": 28.4,
         "temperature_min_c": 14.7,
-        "humidity_mean_percent": 81,
+        "humidity_mean_percent": 84,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 15.4,
-        "wind_gust_max_kmh": 23.4
+        "wind_max_kmh": 14.8,
+        "wind_gust_max_kmh": 24.5
       },
       {
         "date": "2026-07-10",
-        "temperature_max_c": 23.7,
-        "temperature_min_c": 16.7,
+        "temperature_max_c": 23.9,
+        "temperature_min_c": 15.0,
         "humidity_mean_percent": 89,
-        "precipitation_mm": 3.0,
-        "rain_mm": 3.0,
-        "wind_max_kmh": 11.3,
-        "wind_gust_max_kmh": 19.8
+        "precipitation_mm": 9.0,
+        "rain_mm": 9.0,
+        "wind_max_kmh": 11.0,
+        "wind_gust_max_kmh": 25.2
       },
       {
         "date": "2026-07-11",
         "temperature_max_c": 27.5,
-        "temperature_min_c": 16.3,
-        "humidity_mean_percent": 68,
+        "temperature_min_c": 15.1,
+        "humidity_mean_percent": 67,
         "precipitation_mm": 0.1,
         "rain_mm": 0.0,
         "wind_max_kmh": 12.9,
@@ -943,33 +943,33 @@
     "forecast": [
       {
         "date": "2026-07-09",
-        "temperature_max_c": 29.4,
+        "temperature_max_c": 29.8,
         "temperature_min_c": 16.2,
-        "humidity_mean_percent": 69,
+        "humidity_mean_percent": 66,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 21.4,
-        "wind_gust_max_kmh": 31.7
+        "wind_max_kmh": 20.9,
+        "wind_gust_max_kmh": 30.6
       },
       {
         "date": "2026-07-10",
-        "temperature_max_c": 25.8,
-        "temperature_min_c": 18.1,
-        "humidity_mean_percent": 82,
-        "precipitation_mm": 10.9,
-        "rain_mm": 10.9,
-        "wind_max_kmh": 15.9,
-        "wind_gust_max_kmh": 22.0
+        "temperature_max_c": 23.2,
+        "temperature_min_c": 15.9,
+        "humidity_mean_percent": 87,
+        "precipitation_mm": 6.4,
+        "rain_mm": 6.4,
+        "wind_max_kmh": 18.1,
+        "wind_gust_max_kmh": 30.2
       },
       {
         "date": "2026-07-11",
         "temperature_max_c": 22.8,
         "temperature_min_c": 12.0,
-        "humidity_mean_percent": 74,
+        "humidity_mean_percent": 75,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
         "wind_max_kmh": 19.1,
-        "wind_gust_max_kmh": 24.1
+        "wind_gust_max_kmh": 25.1
       },
       {
         "date": "2026-07-12",
@@ -1021,29 +1021,29 @@
     "forecast": [
       {
         "date": "2026-07-09",
-        "temperature_max_c": 27.4,
+        "temperature_max_c": 28.0,
         "temperature_min_c": 15.9,
-        "humidity_mean_percent": 79,
+        "humidity_mean_percent": 78,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 17.9,
-        "wind_gust_max_kmh": 28.1
+        "wind_max_kmh": 15.3,
+        "wind_gust_max_kmh": 24.8
       },
       {
         "date": "2026-07-10",
-        "temperature_max_c": 24.4,
-        "temperature_min_c": 16.4,
-        "humidity_mean_percent": 90,
-        "precipitation_mm": 2.5,
-        "rain_mm": 2.5,
-        "wind_max_kmh": 12.0,
-        "wind_gust_max_kmh": 23.4
+        "temperature_max_c": 24.5,
+        "temperature_min_c": 16.1,
+        "humidity_mean_percent": 87,
+        "precipitation_mm": 21.6,
+        "rain_mm": 21.6,
+        "wind_max_kmh": 13.6,
+        "wind_gust_max_kmh": 28.4
       },
       {
         "date": "2026-07-11",
         "temperature_max_c": 27.0,
         "temperature_min_c": 15.5,
-        "humidity_mean_percent": 77,
+        "humidity_mean_percent": 75,
         "precipitation_mm": 0.5,
         "rain_mm": 0.0,
         "wind_max_kmh": 11.5,
@@ -1177,29 +1177,29 @@
     "forecast": [
       {
         "date": "2026-07-09",
-        "temperature_max_c": 24.8,
+        "temperature_max_c": 25.3,
         "temperature_min_c": 15.8,
         "humidity_mean_percent": 84,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 16.8,
-        "wind_gust_max_kmh": 27.7
+        "wind_max_kmh": 15.3,
+        "wind_gust_max_kmh": 25.9
       },
       {
         "date": "2026-07-10",
-        "temperature_max_c": 23.6,
-        "temperature_min_c": 15.6,
-        "humidity_mean_percent": 94,
-        "precipitation_mm": 0.0,
-        "rain_mm": 0.0,
-        "wind_max_kmh": 10.5,
-        "wind_gust_max_kmh": 23.8
+        "temperature_max_c": 24.6,
+        "temperature_min_c": 16.0,
+        "humidity_mean_percent": 93,
+        "precipitation_mm": 0.4,
+        "rain_mm": 0.4,
+        "wind_max_kmh": 13.0,
+        "wind_gust_max_kmh": 27.4
       },
       {
         "date": "2026-07-11",
         "temperature_max_c": 25.3,
-        "temperature_min_c": 15.4,
-        "humidity_mean_percent": 85,
+        "temperature_min_c": 14.9,
+        "humidity_mean_percent": 83,
         "precipitation_mm": 4.0,
         "rain_mm": 0.0,
         "wind_max_kmh": 12.6,
@@ -1333,28 +1333,28 @@
     "forecast": [
       {
         "date": "2026-07-09",
-        "temperature_max_c": 21.1,
+        "temperature_max_c": 21.5,
         "temperature_min_c": 12.9,
-        "humidity_mean_percent": 91,
+        "humidity_mean_percent": 89,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 16.9,
-        "wind_gust_max_kmh": 25.2
+        "wind_max_kmh": 16.6,
+        "wind_gust_max_kmh": 24.8
       },
       {
         "date": "2026-07-10",
-        "temperature_max_c": 21.2,
-        "temperature_min_c": 14.5,
-        "humidity_mean_percent": 97,
+        "temperature_max_c": 23.0,
+        "temperature_min_c": 15.1,
+        "humidity_mean_percent": 96,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,
-        "wind_max_kmh": 13.0,
-        "wind_gust_max_kmh": 22.3
+        "wind_max_kmh": 14.5,
+        "wind_gust_max_kmh": 24.1
       },
       {
         "date": "2026-07-11",
         "temperature_max_c": 23.2,
-        "temperature_min_c": 14.6,
+        "temperature_min_c": 13.8,
         "humidity_mean_percent": 73,
         "precipitation_mm": 0.0,
         "rain_mm": 0.0,

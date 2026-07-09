@@ -2,7 +2,7 @@
   "Cumberland-County": {
     "county_id": "Cumberland-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -25,7 +25,7 @@
   "Cape-Breton-County": {
     "county_id": "Cape-Breton-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -47,7 +47,7 @@
   "Yarmouth-County": {
     "county_id": "Yarmouth-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -69,7 +69,7 @@
   "Shelburne-County": {
     "county_id": "Shelburne-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -92,7 +92,7 @@
   "Colchester-County": {
     "county_id": "Colchester-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -116,7 +116,7 @@
   "Annapolis-County": {
     "county_id": "Annapolis-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -138,7 +138,7 @@
   "Richmond-County": {
     "county_id": "Richmond-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -160,7 +160,7 @@
   "Lunenburg-County": {
     "county_id": "Lunenburg-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -183,7 +183,7 @@
   "Queens-County": {
     "county_id": "Queens-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -206,7 +206,7 @@
   "Antigonish-County": {
     "county_id": "Antigonish-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -228,7 +228,7 @@
   "Halifax-County": {
     "county_id": "Halifax-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -254,7 +254,7 @@
   "Guysborough-County": {
     "county_id": "Guysborough-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -278,7 +278,7 @@
   "Inverness-County": {
     "county_id": "Inverness-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -300,7 +300,7 @@
   "Pictou-County": {
     "county_id": "Pictou-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -322,7 +322,7 @@
   "Victoria-County": {
     "county_id": "Victoria-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -344,7 +344,7 @@
   "Kings-County": {
     "county_id": "Kings-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -367,7 +367,7 @@
   "Hants-County": {
     "county_id": "Hants-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
@@ -390,7 +390,7 @@
   "Digby-County": {
     "county_id": "Digby-County",
     "date": "2026-07-09",
-    "updated_at": "2026-07-09T10:47:24-03:00",
+    "updated_at": "2026-07-09T12:53:35-03:00",
     "timezone": "America/Halifax",
     "source": "https://novascotia.ca/natr/forestprotection/wildfire/fwi/FWIforecast.xml",
     "stations": [
