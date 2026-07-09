@@ -17,6 +17,20 @@ def weather_features(weather: dict) -> dict:
     }
 
 
+def classify_fwi(fwi: float | None) -> str:
+    if fwi is None:
+        return "unknown"
+    if fwi < 4:
+        return "low"
+    if fwi < 10:
+        return "moderate"
+    if fwi < 17:
+        return "high"
+    if fwi < 23:
+        return "very_high"
+    return "extreme"
+
+
 def rule_based_predict(weather: dict) -> dict:
     temp = float(weather.get("temperature_max_c") or 0)
     humidity = float(weather.get("humidity_mean_percent") or 100)
@@ -67,15 +81,19 @@ def rule_based_predict(weather: dict) -> dict:
         score += 1
         reasons.append("short dry spell")
 
-    if score >= 6:
+    # Revised interpretation:
+    # Green = clearly low-risk weather.
+    # Yellow = controlled burning window under moderate fire-weather risk.
+    # Red = high-risk conditions where burning should not be allowed.
+    if score >= 7:
         level = "red"
-        confidence = min(90, 60 + score * 4)
-    elif score >= 3:
+        confidence = min(90, 58 + score * 4)
+    elif score >= 1:
         level = "yellow"
-        confidence = min(85, 55 + score * 5)
+        confidence = min(85, 58 + score * 5)
     else:
         level = "green"
-        confidence = max(55, 75 - score * 3)
+        confidence = 62
 
     return {
         "level": level,
@@ -84,6 +102,76 @@ def rule_based_predict(weather: dict) -> dict:
         "score": score,
         "reason": ", ".join(reasons) if reasons else "low fire-risk weather pattern",
     }
+
+
+def official_fwi_refined_predict(weather: dict, fire_weather: dict) -> dict:
+    base = rule_based_predict(weather)
+
+    fwi = fire_weather.get("fwi")
+    ffmc = fire_weather.get("ffmc")
+    isi = fire_weather.get("isi")
+    bui = fire_weather.get("bui")
+    rh = fire_weather.get("rh_percent")
+    wind = fire_weather.get("wind_speed_kph")
+    rain = fire_weather.get("rain_24h_mm")
+
+    fwi_class = classify_fwi(fwi)
+
+    reasons = [
+        f"official FWI category: {fwi_class}",
+        f"FWI {fwi}" if fwi is not None else None,
+        f"FFMC {ffmc}" if ffmc is not None else None,
+        f"ISI {isi}" if isi is not None else None,
+    ]
+    reasons = [r for r in reasons if r]
+
+    # Red only for clearly severe official fire-weather signals.
+    if (
+        fwi is not None
+        and (
+            fwi >= 23
+            or (
+                fwi >= 17
+                and ffmc is not None and ffmc >= 92
+                and rh is not None and rh <= 35
+                and wind is not None and wind >= 20
+            )
+        )
+    ):
+        return {
+            "level": "red",
+            "confidence": 82,
+            "model": "official_fwi_refined",
+            "score": base["score"],
+            "reason": ", ".join(reasons + ["severe official fire-weather conditions"]),
+        }
+
+    # Green requires genuinely low official fire-weather risk.
+    if (
+        fwi is not None and fwi < 4
+        and ffmc is not None and ffmc < 85
+        and (rh is None or rh >= 60)
+        and (wind is None or wind < 15)
+    ):
+        return {
+            "level": "green",
+            "confidence": 78,
+            "model": "official_fwi_refined",
+            "score": base["score"],
+            "reason": ", ".join(reasons + ["low official fire-weather conditions"]),
+        }
+
+    # Moderate/high FWI is best interpreted as restricted burning window.
+    if fwi is not None and fwi < 23:
+        return {
+            "level": "yellow",
+            "confidence": 76 if fwi >= 10 else 70,
+            "model": "official_fwi_refined",
+            "score": base["score"],
+            "reason": ", ".join(reasons + ["restricted burning window is more appropriate"]),
+        }
+
+    return base
 
 
 def distance(a: dict, b: dict) -> float:
@@ -97,7 +185,6 @@ def distance(a: dict, b: dict) -> float:
     }
 
     total = 0.0
-
     for key, scale in scales.items():
         total += ((float(a.get(key, 0)) - float(b.get(key, 0))) / scale) ** 2
 
@@ -154,16 +241,22 @@ def add_dry_streak(weather_records: list[dict]) -> list[dict]:
     return output
 
 
-def predict_many(weather_records: list[dict], learning: list[dict]) -> list[dict]:
+def predict_many(
+    weather_records: list[dict],
+    learning: list[dict],
+    official_fire_weather: dict | None = None,
+) -> list[dict]:
     weather_records = add_dry_streak(weather_records)
 
     predictions = []
 
     for i, weather in enumerate(weather_records):
-        ml = knn_predict(weather, learning)
-        rule = rule_based_predict(weather)
-
-        result = ml or rule
+        if i == 0 and official_fire_weather:
+            result = official_fwi_refined_predict(weather, official_fire_weather)
+        else:
+            ml = knn_predict(weather, learning)
+            rule = rule_based_predict(weather)
+            result = ml or rule
 
         predictions.append({
             "date": weather["date"],
@@ -174,6 +267,7 @@ def predict_many(weather_records: list[dict], learning: list[dict]) -> list[dict
             "score": result["score"],
             "reason": result["reason"],
             "weather": weather,
+            "official_fire_weather": official_fire_weather if i == 0 else None,
         })
 
     return predictions

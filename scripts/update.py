@@ -410,6 +410,8 @@ def main() -> None:
     if not weather_forecast:
         weather_forecast = fetch_weather_forecast(DEFAULT_COUNTY_ID)
 
+    county_fire_weather = load_json("county_fire_weather.json", {})
+
     predictions_by_county = {}
 
     for county in counties:
@@ -419,6 +421,7 @@ def main() -> None:
         predictions_by_county[county_id] = predict_many(
             weather_records,
             county_learning.get(county_id, []),
+            official_fire_weather=county_fire_weather.get(county_id),
         )
 
     if should_write_official:
