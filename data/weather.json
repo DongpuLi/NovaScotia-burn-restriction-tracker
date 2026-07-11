@@ -1,19 +1,19 @@
 [
   {
     "date": "2026-07-11",
-    "temperature_max_c": 26.5,
+    "temperature_max_c": 26.7,
     "temperature_min_c": 14.6,
-    "humidity_mean_percent": 69,
+    "humidity_mean_percent": 68,
     "precipitation_mm": 0.0,
     "rain_mm": 0.0,
-    "wind_max_kmh": 17.1,
-    "wind_gust_max_kmh": 23.4
+    "wind_max_kmh": 16.1,
+    "wind_gust_max_kmh": 28.8
   },
   {
     "date": "2026-07-12",
     "temperature_max_c": 24.1,
-    "temperature_min_c": 13.2,
-    "humidity_mean_percent": 64,
+    "temperature_min_c": 13.8,
+    "humidity_mean_percent": 65,
     "precipitation_mm": 0.0,
     "rain_mm": 0.0,
     "wind_max_kmh": 17.9,
