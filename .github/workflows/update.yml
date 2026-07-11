@@ -6,6 +6,7 @@ on:
     - cron: "51 14 * * *"
     - cron: "56 14 * * *"
     - cron: "1-16/5 15 * * *"
+    - cron: "41-56/5 15 * * *"
 
 permissions:
   contents: write
