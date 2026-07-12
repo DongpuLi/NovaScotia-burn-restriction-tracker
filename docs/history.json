@@ -92,6 +92,7 @@
     "county": "Halifax County",
     "level": "yellow",
     "status": "Burning is only allowed between 7:00 pm and 8:00 am (burning is not allowed before 7:00 pm)",
-    "source": "https://novascotia.ca/burnsafe/"
+    "source": "https://novascotia.ca/burnsafe/",
+    "site_mode": "active"
   }
 ]
