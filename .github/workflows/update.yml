@@ -1,15 +1,12 @@
 name: Daily Nova Scotia Burn Update
 
 on:
+  repository_dispatch:
+    types:
+      - update
+
   workflow_dispatch:
-  schedule:
-    - cron: "51 14 * * *"
-    - cron: "56 14 * * *"
-    - cron: "1-16/5 15 * * *"
-    - cron: "41-56/5 15 * * *"
-    - cron: "1-16/5 16 * * *"
-    - cron: "41-56/5 16 * * *"
-    - cron: "1-16/5 17 * * *"
+
 
 permissions:
   contents: write
