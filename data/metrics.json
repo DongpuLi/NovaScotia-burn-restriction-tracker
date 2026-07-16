@@ -1,44 +1,44 @@
 {
   "version": "4.1",
   "primary_metric": "one_day_ahead",
-  "total_evaluated": 12,
-  "correct": 4,
-  "accuracy": 0.3333,
+  "total_evaluated": 13,
+  "correct": 5,
+  "accuracy": 0.3846,
   "all_evaluated": {
-    "total": 70,
-    "correct": 33,
-    "accuracy": 0.4714
+    "total": 77,
+    "correct": 35,
+    "accuracy": 0.4545
   },
   "by_horizon": {
     "1": {
-      "total": 12,
-      "correct": 4,
-      "accuracy": 0.3333
+      "total": 13,
+      "correct": 5,
+      "accuracy": 0.3846
     },
     "2": {
-      "total": 11,
-      "correct": 6,
-      "accuracy": 0.5455
+      "total": 12,
+      "correct": 7,
+      "accuracy": 0.5833
     },
     "3": {
-      "total": 10,
+      "total": 11,
       "correct": 5,
-      "accuracy": 0.5
+      "accuracy": 0.4545
     },
     "4": {
+      "total": 10,
+      "correct": 4,
+      "accuracy": 0.4
+    },
+    "5": {
       "total": 9,
       "correct": 4,
       "accuracy": 0.4444
     },
-    "5": {
-      "total": 8,
-      "correct": 4,
-      "accuracy": 0.5
-    },
     "6": {
-      "total": 7,
+      "total": 8,
       "correct": 3,
-      "accuracy": 0.4286
+      "accuracy": 0.375
     }
   },
   "by_actual_level": {
@@ -53,9 +53,9 @@
       "accuracy": 0.6531
     },
     "red": {
-      "total": 21,
-      "correct": 1,
-      "accuracy": 0.0476
+      "total": 28,
+      "correct": 3,
+      "accuracy": 0.1071
     },
     "unknown": {
       "total": 0,
@@ -70,13 +70,13 @@
       "accuracy": 0.0
     },
     "yellow": {
-      "total": 52,
+      "total": 57,
       "correct": 32,
-      "accuracy": 0.6154
+      "accuracy": 0.5614
     },
     "red": {
-      "total": 1,
-      "correct": 1,
+      "total": 3,
+      "correct": 3,
       "accuracy": 1.0
     },
     "unknown": {
@@ -100,8 +100,8 @@
     },
     "red": {
       "green": 0,
-      "yellow": 20,
-      "red": 1,
+      "yellow": 25,
+      "red": 3,
       "unknown": 0
     },
     "unknown": {
@@ -111,5 +111,5 @@
       "unknown": 0
     }
   },
-  "updated_at": "2026-07-15T14:01:14-03:00"
+  "updated_at": "2026-07-16T14:01:23-03:00"
 }

@@ -1,6 +1,6 @@
 {
   "source": "https://novascotia.ca/burnsafe/",
-  "updated_text": "15 July 2026 at 2:00 pm",
+  "updated_text": "16 July 2026 at 2:00 pm",
   "counties": [
     {
       "id": "Annapolis-County",
@@ -12,8 +12,8 @@
     {
       "id": "Antigonish-County",
       "name": "Antigonish County",
-      "level": "green",
-      "status": "Burning is allowed between 2:00 pm and 8:00 am",
+      "level": "red",
+      "status": "Burning is not allowed",
       "source": "https://novascotia.ca/burnsafe/"
     },
     {
@@ -26,22 +26,22 @@
     {
       "id": "Colchester-County",
       "name": "Colchester County",
-      "level": "yellow",
-      "status": "Burning is only allowed between 7:00 pm and 8:00 am (burning is not allowed before 7:00 pm)",
+      "level": "red",
+      "status": "Burning is not allowed",
       "source": "https://novascotia.ca/burnsafe/"
     },
     {
       "id": "Cumberland-County",
       "name": "Cumberland County",
-      "level": "yellow",
-      "status": "Burning is only allowed between 7:00 pm and 8:00 am (burning is not allowed before 7:00 pm)",
+      "level": "red",
+      "status": "Burning is not allowed",
       "source": "https://novascotia.ca/burnsafe/"
     },
     {
       "id": "Digby-County",
       "name": "Digby County",
-      "level": "yellow",
-      "status": "Burning is only allowed between 7:00 pm and 8:00 am (burning is not allowed before 7:00 pm)",
+      "level": "red",
+      "status": "Burning is not allowed",
       "source": "https://novascotia.ca/burnsafe/"
     },
     {
@@ -68,8 +68,8 @@
     {
       "id": "Inverness-County",
       "name": "Inverness County",
-      "level": "green",
-      "status": "Burning is allowed between 2:00 pm and 8:00 am",
+      "level": "yellow",
+      "status": "Burning is only allowed between 7:00 pm and 8:00 am (burning is not allowed before 7:00 pm)",
       "source": "https://novascotia.ca/burnsafe/"
     },
     {
@@ -89,8 +89,8 @@
     {
       "id": "Pictou-County",
       "name": "Pictou County",
-      "level": "yellow",
-      "status": "Burning is only allowed between 7:00 pm and 8:00 am (burning is not allowed before 7:00 pm)",
+      "level": "red",
+      "status": "Burning is not allowed",
       "source": "https://novascotia.ca/burnsafe/"
     },
     {
@@ -110,8 +110,8 @@
     {
       "id": "Shelburne-County",
       "name": "Shelburne County",
-      "level": "yellow",
-      "status": "Burning is only allowed between 7:00 pm and 8:00 am (burning is not allowed before 7:00 pm)",
+      "level": "red",
+      "status": "Burning is not allowed",
       "source": "https://novascotia.ca/burnsafe/"
     },
     {
@@ -124,11 +124,11 @@
     {
       "id": "Yarmouth-County",
       "name": "Yarmouth County",
-      "level": "yellow",
-      "status": "Burning is only allowed between 7:00 pm and 8:00 am (burning is not allowed before 7:00 pm)",
+      "level": "red",
+      "status": "Burning is not allowed",
       "source": "https://novascotia.ca/burnsafe/"
     }
   ],
-  "fetched_at": "2026-07-15T14:01:13-03:00",
+  "fetched_at": "2026-07-16T14:01:20-03:00",
   "timezone": "America/Halifax"
 }
