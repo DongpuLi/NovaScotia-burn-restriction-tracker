@@ -145,5 +145,15 @@
     "level": "red",
     "status": "Burning is not allowed",
     "source": "https://novascotia.ca/burnsafe/"
+  },
+  {
+    "date": "2026-07-17",
+    "updated_at": "2026-07-17T14:01:17-03:00",
+    "timezone": "America/Halifax",
+    "county_id": "Halifax-County",
+    "county": "Halifax County",
+    "level": "red",
+    "status": "Burning is not allowed",
+    "source": "https://novascotia.ca/burnsafe/"
   }
 ]
